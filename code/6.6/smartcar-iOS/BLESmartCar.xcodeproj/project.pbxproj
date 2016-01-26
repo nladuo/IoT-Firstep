@@ -1,0 +1,489 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9A7E52771BBFC02900433257 /* LeSensorObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7E52761BBFC02900433257 /* LeSensorObserver.m */; };
+		9A7E527B1BBFC37300433257 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A7E527A1BBFC37300433257 /* icon.png */; };
+		9AAA0A6F1BBFA09B00641E05 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AAA0A6E1BBFA09B00641E05 /* main.m */; };
+		9AAA0A721BBFA09B00641E05 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AAA0A711BBFA09B00641E05 /* AppDelegate.m */; };
+		9AAA0A781BBFA09B00641E05 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AAA0A761BBFA09B00641E05 /* Main.storyboard */; };
+		9AAA0A7A1BBFA09B00641E05 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AAA0A791BBFA09B00641E05 /* Images.xcassets */; };
+		9AAA0A7D1BBFA09B00641E05 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AAA0A7B1BBFA09B00641E05 /* LaunchScreen.xib */; };
+		9AAA0A891BBFA09C00641E05 /* BleComTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AAA0A881BBFA09C00641E05 /* BleComTests.m */; };
+		9AAA0A951BBFA16900641E05 /* SerialGATT.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AAA0A941BBFA16900641E05 /* SerialGATT.m */; };
+		9AAA0A9D1BBFA20100641E05 /* DeviceControlController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AAA0A991BBFA20100641E05 /* DeviceControlController.m */; };
+		9AAA0A9F1BBFA20100641E05 /* DeviceScanController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AAA0A9C1BBFA20100641E05 /* DeviceScanController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9AAA0A831BBFA09C00641E05 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AAA0A611BBFA09B00641E05 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9AAA0A681BBFA09B00641E05;
+			remoteInfo = BleCom;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9A7E52751BBFC02900433257 /* LeSensorObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LeSensorObserver.h; path = ../LeSensorObserver.h; sourceTree = "<group>"; };
+		9A7E52761BBFC02900433257 /* LeSensorObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LeSensorObserver.m; path = ../LeSensorObserver.m; sourceTree = "<group>"; };
+		9A7E527A1BBFC37300433257 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		9AAA0A691BBFA09B00641E05 /* BLESmartCar.temp_caseinsensitive_rename.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BLESmartCar.temp_caseinsensitive_rename.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AAA0A6D1BBFA09B00641E05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9AAA0A6E1BBFA09B00641E05 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9AAA0A701BBFA09B00641E05 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		9AAA0A711BBFA09B00641E05 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9AAA0A771BBFA09B00641E05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9AAA0A791BBFA09B00641E05 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		9AAA0A7C1BBFA09B00641E05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		9AAA0A821BBFA09C00641E05 /* BLESmartCar.temp_caseinsensitive_renameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BLESmartCar.temp_caseinsensitive_renameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AAA0A871BBFA09C00641E05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9AAA0A881BBFA09C00641E05 /* BleComTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BleComTests.m; sourceTree = "<group>"; };
+		9AAA0A931BBFA16900641E05 /* SerialGATT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SerialGATT.h; sourceTree = "<group>"; };
+		9AAA0A941BBFA16900641E05 /* SerialGATT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SerialGATT.m; sourceTree = "<group>"; };
+		9AAA0A991BBFA20100641E05 /* DeviceControlController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceControlController.m; sourceTree = "<group>"; };
+		9AAA0A9B1BBFA20100641E05 /* DeviceScanController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceScanController.h; sourceTree = "<group>"; };
+		9AAA0A9C1BBFA20100641E05 /* DeviceScanController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceScanController.m; sourceTree = "<group>"; };
+		9AAA0AA51BBFA29F00641E05 /* DeviceControlController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeviceControlController.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9AAA0A661BBFA09B00641E05 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AAA0A7F1BBFA09C00641E05 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9AAA0A601BBFA09B00641E05 = {
+			isa = PBXGroup;
+			children = (
+				9AAA0A921BBFA12300641E05 /* SerialGATT */,
+				9AAA0A6B1BBFA09B00641E05 /* BleCom */,
+				9AAA0A851BBFA09C00641E05 /* BleComTests */,
+				9AAA0A6A1BBFA09B00641E05 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9AAA0A6A1BBFA09B00641E05 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9AAA0A691BBFA09B00641E05 /* BLESmartCar.temp_caseinsensitive_rename.app */,
+				9AAA0A821BBFA09C00641E05 /* BLESmartCar.temp_caseinsensitive_renameTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9AAA0A6B1BBFA09B00641E05 /* BleCom */ = {
+			isa = PBXGroup;
+			children = (
+				9AAA0A981BBFA1B500641E05 /* ui */,
+				9AAA0A971BBFA19800641E05 /* controller */,
+				9AAA0A961BBFA19200641E05 /* LeServiceObserver */,
+				9AAA0A701BBFA09B00641E05 /* AppDelegate.h */,
+				9AAA0A711BBFA09B00641E05 /* AppDelegate.m */,
+				9AAA0A791BBFA09B00641E05 /* Images.xcassets */,
+				9AAA0A6C1BBFA09B00641E05 /* Supporting Files */,
+			);
+			path = BleCom;
+			sourceTree = "<group>";
+		};
+		9AAA0A6C1BBFA09B00641E05 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9A7E527A1BBFC37300433257 /* icon.png */,
+				9AAA0A6D1BBFA09B00641E05 /* Info.plist */,
+				9AAA0A6E1BBFA09B00641E05 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9AAA0A851BBFA09C00641E05 /* BleComTests */ = {
+			isa = PBXGroup;
+			children = (
+				9AAA0A881BBFA09C00641E05 /* BleComTests.m */,
+				9AAA0A861BBFA09C00641E05 /* Supporting Files */,
+			);
+			path = BleComTests;
+			sourceTree = "<group>";
+		};
+		9AAA0A861BBFA09C00641E05 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9AAA0A871BBFA09C00641E05 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9AAA0A921BBFA12300641E05 /* SerialGATT */ = {
+			isa = PBXGroup;
+			children = (
+				9AAA0A931BBFA16900641E05 /* SerialGATT.h */,
+				9AAA0A941BBFA16900641E05 /* SerialGATT.m */,
+			);
+			name = SerialGATT;
+			path = BleCom;
+			sourceTree = "<group>";
+		};
+		9AAA0A961BBFA19200641E05 /* LeServiceObserver */ = {
+			isa = PBXGroup;
+			children = (
+				9A7E52751BBFC02900433257 /* LeSensorObserver.h */,
+				9A7E52761BBFC02900433257 /* LeSensorObserver.m */,
+			);
+			name = LeServiceObserver;
+			path = ../BleCom.xcodeproj;
+			sourceTree = "<group>";
+		};
+		9AAA0A971BBFA19800641E05 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				9AAA0AA51BBFA29F00641E05 /* DeviceControlController.h */,
+				9AAA0A991BBFA20100641E05 /* DeviceControlController.m */,
+				9AAA0A9B1BBFA20100641E05 /* DeviceScanController.h */,
+				9AAA0A9C1BBFA20100641E05 /* DeviceScanController.m */,
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
+		9AAA0A981BBFA1B500641E05 /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				9AAA0A7B1BBFA09B00641E05 /* LaunchScreen.xib */,
+				9AAA0A761BBFA09B00641E05 /* Main.storyboard */,
+			);
+			name = ui;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9AAA0A681BBFA09B00641E05 /* BLESmartCar.temp_caseinsensitive_rename */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9AAA0A8C1BBFA09C00641E05 /* Build configuration list for PBXNativeTarget "BLESmartCar.temp_caseinsensitive_rename" */;
+			buildPhases = (
+				9AAA0A651BBFA09B00641E05 /* Sources */,
+				9AAA0A661BBFA09B00641E05 /* Frameworks */,
+				9AAA0A671BBFA09B00641E05 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BLESmartCar.temp_caseinsensitive_rename;
+			productName = BleCom;
+			productReference = 9AAA0A691BBFA09B00641E05 /* BLESmartCar.temp_caseinsensitive_rename.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9AAA0A811BBFA09C00641E05 /* BLESmartCar.temp_caseinsensitive_renameTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9AAA0A8F1BBFA09C00641E05 /* Build configuration list for PBXNativeTarget "BLESmartCar.temp_caseinsensitive_renameTests" */;
+			buildPhases = (
+				9AAA0A7E1BBFA09C00641E05 /* Sources */,
+				9AAA0A7F1BBFA09C00641E05 /* Frameworks */,
+				9AAA0A801BBFA09C00641E05 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9AAA0A841BBFA09C00641E05 /* PBXTargetDependency */,
+			);
+			name = BLESmartCar.temp_caseinsensitive_renameTests;
+			productName = BleComTests;
+			productReference = 9AAA0A821BBFA09C00641E05 /* BLESmartCar.temp_caseinsensitive_renameTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9AAA0A611BBFA09B00641E05 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = KalenBlue;
+				TargetAttributes = {
+					9AAA0A681BBFA09B00641E05 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					9AAA0A811BBFA09C00641E05 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 9AAA0A681BBFA09B00641E05;
+					};
+				};
+			};
+			buildConfigurationList = 9AAA0A641BBFA09B00641E05 /* Build configuration list for PBXProject "BLESmartCar" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9AAA0A601BBFA09B00641E05;
+			productRefGroup = 9AAA0A6A1BBFA09B00641E05 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9AAA0A681BBFA09B00641E05 /* BLESmartCar.temp_caseinsensitive_rename */,
+				9AAA0A811BBFA09C00641E05 /* BLESmartCar.temp_caseinsensitive_renameTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9AAA0A671BBFA09B00641E05 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A7E527B1BBFC37300433257 /* icon.png in Resources */,
+				9AAA0A781BBFA09B00641E05 /* Main.storyboard in Resources */,
+				9AAA0A7D1BBFA09B00641E05 /* LaunchScreen.xib in Resources */,
+				9AAA0A7A1BBFA09B00641E05 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AAA0A801BBFA09C00641E05 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9AAA0A651BBFA09B00641E05 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A7E52771BBFC02900433257 /* LeSensorObserver.m in Sources */,
+				9AAA0A9D1BBFA20100641E05 /* DeviceControlController.m in Sources */,
+				9AAA0A721BBFA09B00641E05 /* AppDelegate.m in Sources */,
+				9AAA0A6F1BBFA09B00641E05 /* main.m in Sources */,
+				9AAA0A9F1BBFA20100641E05 /* DeviceScanController.m in Sources */,
+				9AAA0A951BBFA16900641E05 /* SerialGATT.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AAA0A7E1BBFA09C00641E05 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AAA0A891BBFA09C00641E05 /* BleComTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9AAA0A841BBFA09C00641E05 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9AAA0A681BBFA09B00641E05 /* BLESmartCar.temp_caseinsensitive_rename */;
+			targetProxy = 9AAA0A831BBFA09C00641E05 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9AAA0A761BBFA09B00641E05 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9AAA0A771BBFA09B00641E05 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9AAA0A7B1BBFA09B00641E05 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9AAA0A7C1BBFA09B00641E05 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9AAA0A8A1BBFA09C00641E05 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		9AAA0A8B1BBFA09C00641E05 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9AAA0A8D1BBFA09C00641E05 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = BleCom/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = BLESmartCar.temp_caseinsensitive_rename;
+			};
+			name = Debug;
+		};
+		9AAA0A8E1BBFA09C00641E05 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = BleCom/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = BLESmartCar.temp_caseinsensitive_rename;
+			};
+			name = Release;
+		};
+		9AAA0A901BBFA09C00641E05 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BleComTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = BLESmartCar.temp_caseinsensitive_renameTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BLESmartCar.temp_caseinsensitive_rename.app/BLESmartCar.temp_caseinsensitive_rename";
+			};
+			name = Debug;
+		};
+		9AAA0A911BBFA09C00641E05 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BleComTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = BLESmartCar.temp_caseinsensitive_renameTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BLESmartCar.temp_caseinsensitive_rename.app/BLESmartCar.temp_caseinsensitive_rename";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9AAA0A641BBFA09B00641E05 /* Build configuration list for PBXProject "BLESmartCar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9AAA0A8A1BBFA09C00641E05 /* Debug */,
+				9AAA0A8B1BBFA09C00641E05 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9AAA0A8C1BBFA09C00641E05 /* Build configuration list for PBXNativeTarget "BLESmartCar.temp_caseinsensitive_rename" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9AAA0A8D1BBFA09C00641E05 /* Debug */,
+				9AAA0A8E1BBFA09C00641E05 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9AAA0A8F1BBFA09C00641E05 /* Build configuration list for PBXNativeTarget "BLESmartCar.temp_caseinsensitive_renameTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9AAA0A901BBFA09C00641E05 /* Debug */,
+				9AAA0A911BBFA09C00641E05 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9AAA0A611BBFA09B00641E05 /* Project object */;
+}
