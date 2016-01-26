@@ -2,7 +2,7 @@
 - [前言]
 
 ### 第一部分：基础入门
-- 第1部分：单片机开发——NodeMcu  
+- 第1部分：[单片机开发——NodeMcu](1.0.md)  
         - 1.1 [NodeMcu介绍与环境搭建](1.1.md)  
         - 1.2 [lua语言快速入门](1.2.md)  
         - 1.3 [点亮一个Led]  
@@ -14,11 +14,11 @@
         - 2.2 [serialport控件使用]  
 - 第3部分：移动开发——Android  
         - 3.1 [安卓开发环境搭建]  
-        - 3.2 [activity学习]  
-        - 3.3 [基本控件与基本布局]  
-        - 3.5 [activity与Intent]  
-        - 3.6 [service学习]  
-        - 3.7 [ListView与BaseAdapter]  
+        - 3.2 [Activity学习]  
+        - 3.3 [安卓布局与基本布局]  
+        - 3.4 [ListView与BaseAdapter]  
+        - 3.5 [Service学习]  
+        - 3.6 [BroadCastReciever学习]  
 - 第4部分：移动开发——iOS  
         - 4.1 Objective-c语言入门  
         - 4.2 StoryBoard使用  
@@ -26,7 +26,7 @@
         - 4.4 页面跳转与传值  
 - 第5部分：Web开发——Golang  
         - 5.1 [go语言开发环境搭建]  
-        - 5.2 [go语言快速入门]  
+        - 5.2 [go语言基础快速入门]  
         - 5.3 [用go语言显示一个网页]  
 
 ### 第二部分：案例学习
@@ -42,3 +42,12 @@
         - 7.2 [NodeMcu的wifi操作]  
         - 7.3 [初涉tcp与http]  
         - 7.4 [网页显示温度]  
+- 第8部分：手机远程控制实现  
+        - 8.1 [go语言的并发]  
+        - 8.2 [用go实现一个简单的聊天服务器]  
+        - 8.3 [mqtt介绍]  
+        - 8.4 [NodeMcu的mqtt]  
+        - 8.5 [安卓模拟Get、Post请求]  
+        - 8.6 iOS模拟Get、Post请求  
+        - 8.7 [安卓手机实现远程控制RGB灯]  
+        - 8.8 iOS手机实现远程控制RGB灯
