@@ -24,7 +24,7 @@
         - 3.4 [ListView与BaseAdapter]  
         - 3.5 [Service学习]  
         - 3.6 [BroadCastReciever学习]  
-- 第4部分：移动开发——iOS
+- 第4部分：移动开发——iOS  
         - 4.1 Objective-c语言入门  
         - 4.2 StoryBoard使用  
         - 4.3 基本控件使用  
