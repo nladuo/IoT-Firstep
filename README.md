@@ -14,17 +14,18 @@
         - 1.3 [点亮一个Led](./book/1.3.md)  
         - 1.4 [定时任务](./book/1.4.md)  
         - 1.5 [PWM操作](./book/1.5.md)  
-        - 1.6 [UART的使用]  
+        - 1.6 [UART的使用](./book/1.6.md)  
 - 第2部分：上位机开发——.Net  
         - 2.1 [winform快速入门]  
         - 2.2 [serialport控件使用]  
-- 第3部分：移动开发——Android  
-        - 3.1 [安卓开发环境搭建]  
-        - 3.2 [Activity学习]  
-        - 3.3 [安卓布局与基本控件]  
-        - 3.4 [ListView与BaseAdapter]  
-        - 3.5 [Service学习]  
-        - 3.6 [BroadCastReciever学习]  
+- 第3部分：[移动开发——Android](./book/3.0.md)  
+        - 3.1 [安卓开发环境搭建](./book/3.1.md)  
+        - 3.2 [HelloActivity分析](./book/3.2.md)  
+        - 3.3 [LinearLayout与基本控件]  
+        - 3.4 [Activity学习]  
+        - 3.5 [ListView与BaseAdapter]  
+        - 3.6 [Service学习]  
+        - 3.7 [BroadCastReciever学习]  
 - 第4部分：移动开发——iOS  
         - 4.1 Objective-c语言入门  
         - 4.2 StoryBoard使用  
