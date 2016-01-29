@@ -1,0 +1,9 @@
+C:\nladuo\c#\SimpleCalculator\SimpleCalculator\bin\Debug\SimpleCalculator.exe.config
+C:\nladuo\c#\SimpleCalculator\SimpleCalculator\bin\Debug\SimpleCalculator.exe
+C:\nladuo\c#\SimpleCalculator\SimpleCalculator\bin\Debug\SimpleCalculator.pdb
+C:\nladuo\c#\SimpleCalculator\SimpleCalculator\obj\Debug\SimpleCalculator.csprojResolveAssemblyReference.cache
+C:\nladuo\c#\SimpleCalculator\SimpleCalculator\obj\Debug\SimpleCalculator.Properties.Resources.resources
+C:\nladuo\c#\SimpleCalculator\SimpleCalculator\obj\Debug\SimpleCalculator.csproj.GenerateResource.Cache
+C:\nladuo\c#\SimpleCalculator\SimpleCalculator\obj\Debug\SimpleCalculator.exe
+C:\nladuo\c#\SimpleCalculator\SimpleCalculator\obj\Debug\SimpleCalculator.pdb
+C:\nladuo\c#\SimpleCalculator\SimpleCalculator\obj\Debug\SimpleCalculator.Form1.resources

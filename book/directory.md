@@ -10,8 +10,8 @@
         - 1.5 [PWM操作](1.5.md)  
         - 1.6 [UART的使用](1.6.md)  
 - 第2部分：[上位机开发——.Net](2.0.md)  
-        - 2.1 [winform快速入门]  
-        - 2.2 [serialport控件使用]  
+        - 2.1 [winform快速入门](2.1.md)  
+        - 2.2 [serialport控件使用](2.2.md)  
 - 第3部分：[移动开发——Android](3.0.md)  
         - 3.1 [安卓开发环境搭建](3.1.md)  
         - 3.2 [HelloActivity分析](3.2.md)  
