@@ -15,7 +15,7 @@
         - 1.4 [定时任务](./book/1.4.md)  
         - 1.5 [PWM操作](./book/1.5.md)  
         - 1.6 [UART的使用](./book/1.6.md)  
-- 第2部分：上位机开发——.Net  
+- 第2部分：[上位机开发——.Net](./book/2.0.md)  
         - 2.1 [winform快速入门]  
         - 2.2 [serialport控件使用]  
 - 第3部分：[移动开发——Android](./book/3.0.md)  
