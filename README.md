@@ -23,7 +23,7 @@
         - 3.2 [HelloActivity分析](./book/3.2.md)  
         - 3.3 [LinearLayout与基本控件](./book/3.3.md)  
         - 3.4 [Intent与Activity的生命周期](./book/3.4.md)  
-        - 3.5 [ListView与BaseAdapter]  
+        - 3.5 [ListView与BaseAdapter](./book/3.5.md)  
         - 3.6 [Service学习]  
         - 3.7 [BroadCastReciever学习]  
 - 第4部分：移动开发——iOS  
@@ -59,3 +59,5 @@
         - 8.6 iOS模拟Get、Post请求  
         - 8.7 安卓手机实现远程控制RGB灯  
         - 8.8 iOS手机实现远程控制RGB灯
+### 附录：
+- 附录A：[如何导入别人的安卓工程]  
