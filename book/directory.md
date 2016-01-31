@@ -19,7 +19,7 @@
         - 3.4 [Intent与Activity的生命周期](3.4.md)  
         - 3.5 [ListView与BaseAdapter](3.5.md)  
         - 3.6 [Service学习]  
-        - 3.7 [BroadCastReciever学习]  
+        - 3.7 [BroadCastReciever学习](3.7.md)  
 - 第4部分：移动开发——iOS  
         - 4.1 Objective-c语言入门  
         - 4.2 StoryBoard使用  
