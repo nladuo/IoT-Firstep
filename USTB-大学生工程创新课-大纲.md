@@ -1,5 +1,4 @@
 ## 大学生工程创新课大纲
-## 大学生工程创新课大纲
 - 第0部分：预热  
         - 如何翻墙  
         - 安装github客户端  
@@ -7,7 +6,7 @@
 
 
 - 第1部分：单片机开发——NodeMcu  
-        - NodeMcu介绍与环境
+        - NodeMcu介绍与环境  
         - lua语言迅速入门  
         - 点亮一个Led  
         - 定时任务  
@@ -44,7 +43,7 @@
         - 在linux上搭建go语言环境  
 
 
-- 第6部分：蓝牙4.0使用
+- 第6部分：蓝牙4.0使用  
         - 蓝牙4.0安卓例程源码阅读  
         - 案例：利用安卓手机控制RGB小灯
 
@@ -55,9 +54,9 @@
         - 案例：网页显示温度  
  
 
-- 第8部分：web服务(很可能不讲)
-        - mqtt介绍
-        - go语言中使用mqtt-server
-        - nodemcu中使用mqtt-client
-        - java中使用mqtt-client
-        - 案例：远程控制小灯
+- 第8部分：web服务(很可能不讲)  
+        - mqtt介绍  
+        - go语言中使用mqtt-server  
+        - nodemcu中使用mqtt-client  
+        - java中使用mqtt-client  
+        - 案例：远程控制小灯  
