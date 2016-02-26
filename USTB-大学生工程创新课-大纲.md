@@ -6,7 +6,7 @@
 
 
 - 第1部分：单片机开发——NodeMcu  
-        - NodeMcu介绍与环境  
+        - NodeMcu介绍与环境搭建  
         - lua语言迅速入门  
         - 点亮一个Led  
         - 定时任务  
