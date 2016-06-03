@@ -53,8 +53,8 @@
         - 9.3 MQTT介绍  
         - 9.4 go语言实现简单的MQTT-broker与client  
         - 9.5 Arduino和ESP8266使用MQTT  
-        - 9.6 安卓模拟Get、Post请求  
-        - 9.7 iOS模拟Get、Post请求  
+        - 9.6 安卓中MQTT客户端的实现  
+        - 9.7 iOS中MQTT客户端的实现  
         - 9.8 安卓手机实现远程控制LED灯  
         - 9.9 iOS手机实现远程控制LED灯  
 
