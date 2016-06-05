@@ -16,8 +16,8 @@
 		9AAA0A951BBFA16900641E05 /* SerialGATT.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AAA0A941BBFA16900641E05 /* SerialGATT.m */; };
 		9AAA0A9D1BBFA20100641E05 /* DeviceControlController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AAA0A991BBFA20100641E05 /* DeviceControlController.m */; };
 		9AAA0A9F1BBFA20100641E05 /* DeviceScanController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AAA0A9C1BBFA20100641E05 /* DeviceScanController.m */; };
-		9AAA0AA21BBFA22900641E05 /* LeSensorObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AAA0AA11BBFA22900641E05 /* LeSensorObserver.m */; };
 		9AAA0AA71BBFB5DA00641E05 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AAA0AA61BBFB5DA00641E05 /* icon.png */; };
+		F4138A871D03ED6C0004C2FB /* LeStatusNotificationCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = F4138A861D03ED6C0004C2FB /* LeStatusNotificationCenter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,10 +47,10 @@
 		9AAA0A991BBFA20100641E05 /* DeviceControlController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceControlController.m; sourceTree = "<group>"; };
 		9AAA0A9B1BBFA20100641E05 /* DeviceScanController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceScanController.h; sourceTree = "<group>"; };
 		9AAA0A9C1BBFA20100641E05 /* DeviceScanController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceScanController.m; sourceTree = "<group>"; };
-		9AAA0AA01BBFA22900641E05 /* LeSensorObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeSensorObserver.h; sourceTree = "<group>"; };
-		9AAA0AA11BBFA22900641E05 /* LeSensorObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeSensorObserver.m; sourceTree = "<group>"; };
 		9AAA0AA51BBFA29F00641E05 /* DeviceControlController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeviceControlController.h; sourceTree = "<group>"; };
 		9AAA0AA61BBFB5DA00641E05 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		F4138A851D03ED6C0004C2FB /* LeStatusNotificationCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeStatusNotificationCenter.h; sourceTree = "<group>"; };
+		F4138A861D03ED6C0004C2FB /* LeStatusNotificationCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeStatusNotificationCenter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +74,7 @@
 		9AAA0A601BBFA09B00641E05 = {
 			isa = PBXGroup;
 			children = (
+				F4138A841D03ED220004C2FB /* LeStatusNotificationCenter */,
 				9AAA0A921BBFA12300641E05 /* SerialGATT */,
 				9AAA0A6B1BBFA09B00641E05 /* BleCom */,
 				9AAA0A851BBFA09C00641E05 /* BleComTests */,
@@ -95,7 +96,6 @@
 			children = (
 				9AAA0A981BBFA1B500641E05 /* ui */,
 				9AAA0A971BBFA19800641E05 /* controller */,
-				9AAA0A961BBFA19200641E05 /* LeServiceObserver */,
 				9AAA0A701BBFA09B00641E05 /* AppDelegate.h */,
 				9AAA0A711BBFA09B00641E05 /* AppDelegate.m */,
 				9AAA0A791BBFA09B00641E05 /* Images.xcassets */,
@@ -141,16 +141,6 @@
 			path = BleCom;
 			sourceTree = "<group>";
 		};
-		9AAA0A961BBFA19200641E05 /* LeServiceObserver */ = {
-			isa = PBXGroup;
-			children = (
-				9AAA0AA01BBFA22900641E05 /* LeSensorObserver.h */,
-				9AAA0AA11BBFA22900641E05 /* LeSensorObserver.m */,
-			);
-			name = LeServiceObserver;
-			path = ../BleCom.xcodeproj;
-			sourceTree = "<group>";
-		};
 		9AAA0A971BBFA19800641E05 /* controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +159,16 @@
 				9AAA0A761BBFA09B00641E05 /* Main.storyboard */,
 			);
 			name = ui;
+			sourceTree = "<group>";
+		};
+		F4138A841D03ED220004C2FB /* LeStatusNotificationCenter */ = {
+			isa = PBXGroup;
+			children = (
+				F4138A851D03ED6C0004C2FB /* LeStatusNotificationCenter.h */,
+				F4138A861D03ED6C0004C2FB /* LeStatusNotificationCenter.m */,
+			);
+			name = LeStatusNotificationCenter;
+			path = BleCom;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,7 +215,7 @@
 		9AAA0A611BBFA09B00641E05 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = KalenBlue;
 				TargetAttributes = {
 					9AAA0A681BBFA09B00641E05 = {
@@ -272,11 +272,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9AAA0AA21BBFA22900641E05 /* LeSensorObserver.m in Sources */,
 				9AAA0A9D1BBFA20100641E05 /* DeviceControlController.m in Sources */,
 				9AAA0A721BBFA09B00641E05 /* AppDelegate.m in Sources */,
 				9AAA0A6F1BBFA09B00641E05 /* main.m in Sources */,
 				9AAA0A9F1BBFA20100641E05 /* DeviceScanController.m in Sources */,
+				F4138A871D03ED6C0004C2FB /* LeStatusNotificationCenter.m in Sources */,
 				9AAA0A951BBFA16900641E05 /* SerialGATT.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,6 +340,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -405,6 +406,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = BleCom/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kalen.app.BLECom;
 				PRODUCT_NAME = BLECom.temp_caseinsensitive_rename;
 			};
 			name = Debug;
@@ -415,6 +417,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = BleCom/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kalen.app.BLECom;
 				PRODUCT_NAME = BLECom.temp_caseinsensitive_rename;
 			};
 			name = Release;
@@ -433,6 +436,7 @@
 				);
 				INFOPLIST_FILE = BleComTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "kalen.app.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = BLECom.temp_caseinsensitive_renameTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BleCom.app/BleCom";
 			};
@@ -448,6 +452,7 @@
 				);
 				INFOPLIST_FILE = BleComTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "kalen.app.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = BLECom.temp_caseinsensitive_renameTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BleCom.app/BleCom";
 			};
@@ -472,6 +477,7 @@
 				9AAA0A8E1BBFA09C00641E05 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9AAA0A8F1BBFA09C00641E05 /* Build configuration list for PBXNativeTarget "BLECom.temp_caseinsensitive_renameTests" */ = {
 			isa = XCConfigurationList;
@@ -480,6 +486,7 @@
 				9AAA0A911BBFA09C00641E05 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -36,7 +36,7 @@
     }
     self.title = self.sensor.activePeripheral.name;
     //添加当前viewcontroller到观察者中，接收蓝牙状态的改变
-    [[LeSensorObserver getInstance] addLeSensorObserver:self];
+    [[LeStatusNotificationCenter getInstance] addObserver:self];
 
     self.receiveDataTv.editable = FALSE;
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0640"
+   LastUpgradeVersion = "0730"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -15,41 +15,27 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "9AAA0A681BBFA09B00641E05"
-               BuildableName = "BleCom.app"
-               BlueprintName = "BleCom"
-               ReferencedContainer = "container:BLECom.temp_caseinsensitive_rename.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9AAA0A811BBFA09C00641E05"
-               BuildableName = "BleComTests.xctest"
-               BlueprintName = "BleComTests"
-               ReferencedContainer = "container:BLECom.temp_caseinsensitive_rename.xcodeproj">
+               BuildableName = "BLECom.temp_caseinsensitive_rename.app"
+               BlueprintName = "BLECom.temp_caseinsensitive_rename"
+               ReferencedContainer = "container:BLECom.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
+      buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES"
-      buildConfiguration = "Debug">
+      shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "9AAA0A811BBFA09C00641E05"
-               BuildableName = "BleComTests.xctest"
-               BlueprintName = "BleComTests"
-               ReferencedContainer = "container:BLECom.temp_caseinsensitive_rename.xcodeproj">
+               BuildableName = "BLECom.temp_caseinsensitive_renameTests.xctest"
+               BlueprintName = "BLECom.temp_caseinsensitive_renameTests"
+               ReferencedContainer = "container:BLECom.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,48 +43,51 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9AAA0A681BBFA09B00641E05"
-            BuildableName = "BleCom.app"
-            BlueprintName = "BleCom"
-            ReferencedContainer = "container:BLECom.temp_caseinsensitive_rename.xcodeproj">
+            BuildableName = "BLECom.temp_caseinsensitive_rename.app"
+            BlueprintName = "BLECom.temp_caseinsensitive_rename"
+            ReferencedContainer = "container:BLECom.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
+      <AdditionalOptions>
+      </AdditionalOptions>
    </TestAction>
    <LaunchAction
+      buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
-      buildConfiguration = "Debug"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
+      debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
       <BuildableProductRunnable
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9AAA0A681BBFA09B00641E05"
-            BuildableName = "BleCom.app"
-            BlueprintName = "BleCom"
-            ReferencedContainer = "container:BLECom.temp_caseinsensitive_rename.xcodeproj">
+            BuildableName = "BLECom.temp_caseinsensitive_rename.app"
+            BlueprintName = "BLECom.temp_caseinsensitive_rename"
+            ReferencedContainer = "container:BLECom.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
+      buildConfiguration = "Release"
       shouldUseLaunchSchemeArgsEnv = "YES"
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
-      buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
       <BuildableProductRunnable
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9AAA0A681BBFA09B00641E05"
-            BuildableName = "BleCom.app"
-            BlueprintName = "BleCom"
-            ReferencedContainer = "container:BLECom.temp_caseinsensitive_rename.xcodeproj">
+            BuildableName = "BLECom.temp_caseinsensitive_rename.app"
+            BlueprintName = "BLECom.temp_caseinsensitive_rename"
+            ReferencedContainer = "container:BLECom.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

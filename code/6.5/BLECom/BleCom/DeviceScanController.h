@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "SerialGATT.h"
-#import "LeSensorObserver.h"
+#import "LeStatusNotificationCenter.h"
 
 @class DeviceControlController;
 

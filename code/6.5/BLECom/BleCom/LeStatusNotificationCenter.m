@@ -1,18 +1,18 @@
 //
-//  LeSenorObserver.m
-//  BLKApp
+//  LeStatusNotificationCenter.m
+//  BLECom
 //
-//  Created by kalen blue on 15-10-2.
-//  Copyright (c) 2015年 TRY. All rights reserved.
+//  Created by 刘嘉铭 on 16/6/5.
+//  Copyright © 2016年 KalenBlue. All rights reserved.
 //
 
-#import "LeSensorObserver.h"
+#import "LeStatusNotificationCenter.h"
 
-@implementation LeSensorObserver
+@implementation LeStatusNotificationCenter
 
 @synthesize observers;
 
-static LeSensorObserver* sensorObserver = nil;
+static LeStatusNotificationCenter* leNC = nil;
 
 
 - (instancetype)init
@@ -24,28 +24,29 @@ static LeSensorObserver* sensorObserver = nil;
     return self;
 }
 
-+(LeSensorObserver*) getInstance
+//单例对象，只有一个广播中心：NotificationCenter
++(LeStatusNotificationCenter*) getInstance
 {
-    if (sensorObserver == nil) {
-        sensorObserver = [[LeSensorObserver alloc] init];
+    if (leNC == nil) {
+        leNC = [[LeStatusNotificationCenter alloc] init];
     }
     
-    return sensorObserver;
+    return leNC;
 }
 
-
--(void) addLeSensorObserver: (id<BTSmartSensorDelegate>)observed
+-(void) addObserver: (id<BTSmartSensorDelegate>)observed
 {
     [observers addObject:observed];
 }
 
--(void) removeLeSensorObserver: (id<BTSmartSensorDelegate>)observed
+-(void) removeObserver: (id<BTSmartSensorDelegate>)observed
 {
     if ([observers containsObject:observed]) {
         [observers removeObject:observed];
     }
 }
 
+//把蓝牙连接事件转发给观察者们
 -(void)setConnect
 {
     id<BTSmartSensorDelegate> observed;
@@ -55,6 +56,7 @@ static LeSensorObserver* sensorObserver = nil;
     }
 }
 
+//把蓝牙断开连接事件转发给观察者们
 -(void)setDisconnect
 {
     id<BTSmartSensorDelegate> observed;
@@ -64,6 +66,7 @@ static LeSensorObserver* sensorObserver = nil;
     }
 }
 
+//把发现蓝牙外设转发给观察者们
 - (void) peripheralFound:(CBPeripheral *)peripheral
 {
     id<BTSmartSensorDelegate> observed;
@@ -73,6 +76,7 @@ static LeSensorObserver* sensorObserver = nil;
     }
 }
 
+//把蓝牙接受到的数据转发给观察者们
 - (void) serialGATTCharValueUpdated: (NSString *)UUID value: (NSData *)data
 {
     id<BTSmartSensorDelegate> observed;

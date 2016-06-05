@@ -42,8 +42,8 @@
     sensor = [[SerialGATT alloc] init];
     [sensor setup];
     //把当前的ViewController添加到观察者列表中，接受蓝牙通知
-    sensor.delegate = [LeSensorObserver getInstance];
-    [[LeSensorObserver getInstance] addLeSensorObserver:self];
+    sensor.delegate = [LeStatusNotificationCenter getInstance];
+    [[LeStatusNotificationCenter getInstance] addObserver:self];
     
     peripheralArray = [[NSMutableArray alloc] init];
 }
@@ -75,7 +75,7 @@
         [tableView reloadData];
     }
     
-    sensor.delegate = [LeSensorObserver getInstance];
+    sensor.delegate = [LeStatusNotificationCenter getInstance];
 
     NSLog(@"beagin scanning");
     [scanBtn setTitle:@"扫描中" forState:UIControlStateNormal];
