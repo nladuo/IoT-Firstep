@@ -11,7 +11,7 @@
 - 第1部分：[单片机开发——Arduino](./book/1.0.md)  
         - 1.1 [Arduino开发环境搭建](./book/1.1.md)  
         - 1.2 [点亮一个Led](./book/1.2.md)  
-        - 1.3 [PWM操作]  
+        - 1.3 [PWM操作](./book/1.3.md)  
         - 1.4 [UART的使用]  
 - 第2部分：[上位机开发——.Net](./book/2.0.md)  
         - 2.1 [winform快速入门](./book/2.1.md)  

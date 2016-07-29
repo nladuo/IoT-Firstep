@@ -1,20 +1,10 @@
-int pin = 3; 
-int flag = 0;
-int duty = 0;
+int pin = 3;
+int t = 28;
+// int T = 255 隐藏大T为255, 占空比= t:T
 
 void setup() {
-  // put your setup code here, to run once:
   pinMode(pin, OUTPUT);
+  analogWrite(pin, t);
 }
 
-void loop() {
-  analogWrite(pin, duty);
-  delay(5);
-  if(flag == 0){
-    duty++;
-    if(duty >= 255) flag = 1;
-  }else{
-    duty--;
-    if(duty <= 0) flag = 0;
-  }
-}
+void loop() {}

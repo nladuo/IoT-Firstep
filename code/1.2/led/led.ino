@@ -5,7 +5,7 @@ void setup() {
 }
 
 void loop() {
-  //digitalWrite(pin, HIGH);  //在D13管脚输出高电平
+  digitalWrite(pin, HIGH);  //在D13管脚输出高电平
   delay(1000);              //MCU休眠1000ms
   digitalWrite(pin, LOW);   //在D13管脚输出低电平
   delay(1000);              //MCU休眠1000ms
