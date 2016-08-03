@@ -1,4 +1,4 @@
-char temp;
+unsigned char temp;
 int rPin = 3;
 int gPin = 5;
 int bPin = 6;   
@@ -16,7 +16,7 @@ void setup() {
 
 void loop() {
   while(Serial.available()){ //如果电脑给单片机发送了数据,就把同样的数据发送回去.
-    temp=Serial.read();
+    temp = Serial.read();
     if(temp < 50){
       analogWrite(rPin, temp * 5);
     }else if(temp < 100){

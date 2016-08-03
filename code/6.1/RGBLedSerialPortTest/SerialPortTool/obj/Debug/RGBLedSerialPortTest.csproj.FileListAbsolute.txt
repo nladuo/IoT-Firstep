@@ -1,0 +1,12 @@
+C:\Users\Ireland\Desktop\SerialPortTool2\SerialPortTool\bin\Debug\SerialPortTool.exe.config
+C:\Users\Ireland\Desktop\SerialPortTool2\SerialPortTool\bin\Debug\SerialPortTool.exe
+C:\Users\Ireland\Desktop\SerialPortTool2\SerialPortTool\bin\Debug\SerialPortTool.pdb
+C:\Users\Ireland\Desktop\SerialPortTool2\SerialPortTool\obj\Debug\RGBLedSerialPortTest.csprojResolveAssemblyReference.cache
+C:\Users\Ireland\Desktop\SerialPortTool2\SerialPortTool\obj\Debug\SerialPortTool.Form1.resources
+C:\Users\Ireland\Desktop\SerialPortTool2\SerialPortTool\obj\Debug\SerialPortTool.Properties.Resources.resources
+C:\Users\Ireland\Desktop\SerialPortTool2\SerialPortTool\obj\Debug\RGBLedSerialPortTest.csproj.GenerateResource.Cache
+C:\Users\Ireland\Desktop\SerialPortTool2\SerialPortTool\obj\Debug\SerialPortTool.exe
+C:\Users\Ireland\Desktop\SerialPortTool2\SerialPortTool\obj\Debug\SerialPortTool.pdb
+C:\Users\Ireland\Desktop\RGBLedSerialPortTest\SerialPortTool\bin\Debug\SerialPortTool.exe.config
+C:\Users\Ireland\Desktop\RGBLedSerialPortTest\SerialPortTool\obj\Debug\SerialPortTool.exe
+C:\Users\Ireland\Desktop\RGBLedSerialPortTest\SerialPortTool\obj\Debug\SerialPortTool.pdb
