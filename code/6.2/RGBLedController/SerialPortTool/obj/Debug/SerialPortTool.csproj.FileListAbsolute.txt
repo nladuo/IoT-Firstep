@@ -1,0 +1,12 @@
+C:\nladuo\c#\SerialPortTool\SerialPortTool\bin\Debug\SerialPortTool.exe.config
+C:\nladuo\c#\SerialPortTool\SerialPortTool\bin\Debug\SerialPortTool.exe
+C:\nladuo\c#\SerialPortTool\SerialPortTool\bin\Debug\SerialPortTool.pdb
+C:\nladuo\c#\SerialPortTool\SerialPortTool\obj\Debug\SerialPortTool.csprojResolveAssemblyReference.cache
+C:\nladuo\c#\SerialPortTool\SerialPortTool\obj\Debug\SerialPortTool.Form1.resources
+C:\nladuo\c#\SerialPortTool\SerialPortTool\obj\Debug\SerialPortTool.Properties.Resources.resources
+C:\nladuo\c#\SerialPortTool\SerialPortTool\obj\Debug\SerialPortTool.csproj.GenerateResource.Cache
+C:\nladuo\c#\SerialPortTool\SerialPortTool\obj\Debug\SerialPortTool.exe
+C:\nladuo\c#\SerialPortTool\SerialPortTool\obj\Debug\SerialPortTool.pdb
+C:\nladuo\c#\SerialPortTool2\SerialPortTool\bin\Debug\SerialPortTool.exe.config
+C:\nladuo\c#\SerialPortTool2\SerialPortTool\obj\Debug\SerialPortTool.exe
+C:\nladuo\c#\SerialPortTool2\SerialPortTool\obj\Debug\SerialPortTool.pdb

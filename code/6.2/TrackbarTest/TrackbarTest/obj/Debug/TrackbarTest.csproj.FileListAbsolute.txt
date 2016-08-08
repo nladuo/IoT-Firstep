@@ -1,0 +1,9 @@
+C:\Users\Ireland\Desktop\TrackbarTest\TrackbarTest\bin\Debug\TrackbarTest.exe.config
+C:\Users\Ireland\Desktop\TrackbarTest\TrackbarTest\bin\Debug\TrackbarTest.exe
+C:\Users\Ireland\Desktop\TrackbarTest\TrackbarTest\bin\Debug\TrackbarTest.pdb
+C:\Users\Ireland\Desktop\TrackbarTest\TrackbarTest\obj\Debug\TrackbarTest.csprojResolveAssemblyReference.cache
+C:\Users\Ireland\Desktop\TrackbarTest\TrackbarTest\obj\Debug\TrackbarTest.Form1.resources
+C:\Users\Ireland\Desktop\TrackbarTest\TrackbarTest\obj\Debug\TrackbarTest.Properties.Resources.resources
+C:\Users\Ireland\Desktop\TrackbarTest\TrackbarTest\obj\Debug\TrackbarTest.csproj.GenerateResource.Cache
+C:\Users\Ireland\Desktop\TrackbarTest\TrackbarTest\obj\Debug\TrackbarTest.exe
+C:\Users\Ireland\Desktop\TrackbarTest\TrackbarTest\obj\Debug\TrackbarTest.pdb
