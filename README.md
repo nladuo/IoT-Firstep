@@ -1,7 +1,7 @@
 # IoT-Firstep
 一个物联网(IoT)开发的入门教程。涉及单片机、上位机、移动应用、服务器后台开发的知识。以及蓝牙4.0、以太网模块的使用实例。
 ## 状态
-努力编写中。。。(iOS相关的暂时不会编写)
+努力编写中。。。
 ## 说明
 本文的开发环境除了iOS的开发，都是在Windows平台进行的。
 ## 目录
@@ -24,7 +24,7 @@
         - 3.5 [ListView与BaseAdapter](./book/3.5.md)  
         - 3.6 [Service学习](./book/3.6.md)  
         - 3.7 [BroadCastReciever学习](./book/3.7.md)  
-- 第4部分：[移动开发——iOS]  
+- 第4部分：[移动开发——iOS](./book/4.0.md)  
         - 4.1 [Objective-C语言快速入门]  
         - 4.2 [基本控件使用]  
         - 4.3 [StoryBoard使用]  
