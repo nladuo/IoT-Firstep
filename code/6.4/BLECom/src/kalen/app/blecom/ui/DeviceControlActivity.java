@@ -1,4 +1,4 @@
-package kalen.app.blecomsample.ui;
+package kalen.app.blecom.ui;
 
 import android.app.Activity;
 import android.bluetooth.BluetoothGattCharacteristic;
@@ -24,13 +24,9 @@ import java.util.List;
 
 import com.example.android.bluetoothlegatt.BluetoothLeService;
 
-import kalen.app.blecomsample.R;
-import kalen.app.blecomsample.model.C;
-/**
- * 
- * @author kalen
- *
- */
+import kalen.app.blecom.model.C;
+import kalen.app.blecom.R;
+
 public class DeviceControlActivity extends Activity {
     private final static String TAG = DeviceControlActivity.class.getSimpleName();
 
@@ -63,12 +59,11 @@ public class DeviceControlActivity extends Activity {
     };
 
     /**
-     * ��??����������?????����??����?????��
-     * ACTION_GATT_CONNECTED: connected to a GATT server.
-     * ACTION_GATT_DISCONNECTED: disconnected from a GATT server.
-     * ACTION_GATT_SERVICES_DISCOVERED: discovered GATT services.
-     * ACTION_DATA_AVAILABLE: received data from the device.  This can be a result of read
-     *                         or notification operations.
+     * 用于接收蓝牙状�?�广播的BroadcastReceiver
+     * ACTION_GATT_CONNECTED: 蓝牙连接成功广播.
+     * ACTION_GATT_DISCONNECTED: 蓝牙断开广播.
+     * ACTION_GATT_SERVICES_DISCOVERED: 发现GATT的服务广�?.
+     * ACTION_DATA_AVAILABLE: 接收到蓝牙的数据广播
      * 
      */
     private final BroadcastReceiver mGattUpdateReceiver = new BroadcastReceiver() {
@@ -101,10 +96,10 @@ public class DeviceControlActivity extends Activity {
         setContentView(R.layout.activity_control);
 
         final Intent intent = getIntent();
-        //��峰���?����???������������????���?mac��??���?
+        //获取设备名以及设备地�?
         mDeviceName = intent.getStringExtra(C.EXTRAS_DEVICE_NAME);
         mDeviceAddress = intent.getStringExtra(C.EXTRAS_DEVICE_ADDRESS);
-        //���濮����������
+        
         mRecieveDataTView = (TextView) findViewById(R.id.control_receive_data_tv);
         mSendDataEditText = (EditText) findViewById(R.id.control_send_data_et);
         
@@ -112,19 +107,19 @@ public class DeviceControlActivity extends Activity {
         getActionBar().setDisplayHomeAsUpEnabled(true);
         Intent gattServiceIntent = new Intent(this, BluetoothLeService.class);
         bindService(gattServiceIntent, mServiceConnection, BIND_AUTO_CREATE);
-        //��??��诲���������������??����edittext������??��???��??��?????��������??��
+        //点击发�?�按�?
        findViewById(R.id.control_send_btn).setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				//��??�������������?����
+				//没找到对应的特征�?,直接返回
 				if (mCharacteristic == null) {
-					Toast.makeText(DeviceControlActivity.this, "uninitialized characteristics", 
+					Toast.makeText(DeviceControlActivity.this, "没有找到对应的特征�??,请尝试重新连�?", 
 							Toast.LENGTH_SHORT).show();
 					return;
 				}
-				//������������??�����?
+				//没连�?,直接返回
 				if (!mConnected) {
-					Toast.makeText(DeviceControlActivity.this, "浣�??���????��??����??��???�����?", 
+					Toast.makeText(DeviceControlActivity.this, "设备尚未连接", 
 							Toast.LENGTH_SHORT).show();
 					return;
 				}
@@ -135,10 +130,11 @@ public class DeviceControlActivity extends Activity {
 		});
     }
     
+    /**
+     * 发�?�字符串给蓝牙设�?
+     * @param data
+     */
     private void sendStrDataToLeDevice(String data){
-    	
-		//�?�濮����������??��
-		
 		if (!data.equals("")) {
 			byte[] datas = data.getBytes();
 			mCharacteristic.setValue(datas);
@@ -199,7 +195,7 @@ public class DeviceControlActivity extends Activity {
     }
 
     /**
-     * ��??��????����??��??���?
+     * 更新连接状�??
      * @param resourceId
      */
     private void updateConnectionState(final int resourceId) {
@@ -208,7 +204,7 @@ public class DeviceControlActivity extends Activity {
     }
 
     /**
-     * ��������??������??��??����??��������浣�
+     * 接收到数据的回调
      * @param data
      */
     private void onReceiveData(byte[] bytes) {
@@ -223,8 +219,7 @@ public class DeviceControlActivity extends Activity {
     }
 
     /**
-     * ��峰�����??�����?��?������??��?���?��??��?��??����???��褰�����?????��??��??��浣跨��?����??�?
-     * 						������4.0������??��������?������??��?��??������??��������??讹��?
+     * 获取BLE的特征�??
      * @param gattServices
      */
     private void getCharacteristic(List<BluetoothGattService> gattServices) {
@@ -235,17 +230,17 @@ public class DeviceControlActivity extends Activity {
         for (BluetoothGattService gattService : gattServices) {
             uuid = gattService.getUuid().toString();
             
-            //��??��???������??����?����??����service uuid
+            //找uuid�?0xffe0的服�?
             if (uuid.equals(C.SERVICE_UUID)) {
             	List<BluetoothGattCharacteristic> gattCharacteristics =
                         gattService.getCharacteristics();
-                //��???��service������?����?�����?characteristics
+                //找uuid�?0xffe1的特征�??
                 for (BluetoothGattCharacteristic gattCharacteristic : gattCharacteristics) {
                     uuid = gattCharacteristic.getUuid().toString();
                     if(uuid.equals(C.CHAR_UUID)){
                     	mCharacteristic = gattCharacteristic;
                     	final int charaProp = gattCharacteristic.getProperties();
-                		//?????��??��??���������?
+                		//�?启该特征值的数据的监�?
                 		if ((charaProp | BluetoothGattCharacteristic.PROPERTY_NOTIFY) > 0) {
                             mBluetoothLeService.setCharacteristicNotification(
                                     mCharacteristic, true);
@@ -256,9 +251,9 @@ public class DeviceControlActivity extends Activity {
 			}
         }
         
-        //濡�����?????����峰�����characteristics???������???�����?activity???��??��??������???�����?
+        //如果没找到指定的特征�?,直接返回
         if (mCharacteristic == null) {
-        	Toast.makeText(DeviceControlActivity.this, "�????����??��???��??��?��???峰���??������???�����?", 
+        	Toast.makeText(DeviceControlActivity.this, "未找到指定特征�??", 
         			Toast.LENGTH_LONG).show();
 			finish();
 		}
@@ -266,7 +261,7 @@ public class DeviceControlActivity extends Activity {
     }
 
     /**
-     * ��峰�����������?�������????��������?���?IntentFilter
+     * 构建IntentFilter
      * @return
      */
     private static IntentFilter makeGattUpdateIntentFilter() {

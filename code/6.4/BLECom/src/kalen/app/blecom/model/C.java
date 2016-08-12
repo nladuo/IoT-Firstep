@@ -1,12 +1,13 @@
-package kalen.app.blecomsample.model;
+package kalen.app.blecom.model;
 
 /**
- * 瀹?涔?甯搁??
+ * 定义常量
  */
 public class C {
 
-	//???浠????瑕????service_uuid ??? 0xffe0锛???朵腑characteristics_uuid???0xffe1
+	//对应service_uuid:0xffe0
     public static String SERVICE_UUID = "0000ffe0-0000-1000-8000-00805f9b34fb";
+    //对应characteristics_uuid:0xffe1
     public static String CHAR_UUID = "0000ffe1-0000-1000-8000-00805f9b34fb";
 
     public static final String EXTRAS_DEVICE_NAME = "DEVICE_NAME";

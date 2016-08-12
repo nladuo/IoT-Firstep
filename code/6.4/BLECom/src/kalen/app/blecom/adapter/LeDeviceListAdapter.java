@@ -1,7 +1,7 @@
-package kalen.app.blecomsample.adapter;
+package kalen.app.blecom.adapter;
 
 import java.util.ArrayList;
-import kalen.app.blecomsample.R;
+import kalen.app.blecom.R;
 import android.annotation.SuppressLint;
 import android.bluetooth.BluetoothDevice;
 import android.content.Context;
@@ -11,11 +11,6 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-/**
- * 
- * @author kalen
- *
- */
 public class LeDeviceListAdapter extends BaseAdapter {
     private ArrayList<BluetoothDevice> mLeDevices;
     private LayoutInflater mInflator;
@@ -24,7 +19,6 @@ public class LeDeviceListAdapter extends BaseAdapter {
         super();
         mLeDevices = new ArrayList<BluetoothDevice>();
         mInflator = LayoutInflater.from(context);
-        
     }
 
     public void addDevice(BluetoothDevice device) {

@@ -1,4 +1,4 @@
-package kalen.app.blecomsample.ui;
+package kalen.app.blecom.ui;
 
 import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;
@@ -16,15 +16,10 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 import android.widget.Toast;
-import kalen.app.blecomsample.R;
-import kalen.app.blecomsample.adapter.LeDeviceListAdapter;
-import kalen.app.blecomsample.model.C;
+import kalen.app.blecom.adapter.LeDeviceListAdapter;
+import kalen.app.blecom.model.C;
+import kalen.app.blecom.R;
 
-/**
- * 
- * @author kalen
- *
- */
 public class DeviceScanActivity extends Activity implements OnItemClickListener{
     
     private BluetoothAdapter mBluetoothAdapter;
@@ -36,7 +31,7 @@ public class DeviceScanActivity extends Activity implements OnItemClickListener{
 
     
     private static final int REQUEST_ENABLE_BT = 1;
-    // �?��?????��������??��??���?�?10�?����
+    // 扫描时常�?10000ms
     private static final long SCAN_PERIOD = 10000;
 
     @Override
@@ -47,18 +42,18 @@ public class DeviceScanActivity extends Activity implements OnItemClickListener{
         
         mLView = (ListView) findViewById(R.id.scan_device_lv);
 
-        // ��???����???��??��������??�����������������?4.0???��??��������??辩��?��?������
+        // 判断硬件是否支持蓝牙4.0
         if (!getPackageManager().hasSystemFeature(PackageManager.FEATURE_BLUETOOTH_LE)) {
             Toast.makeText(this, R.string.ble_not_supported, Toast.LENGTH_SHORT).show();
             finish();
         }
 
-        // ��峰��?BlueToothManager???�����?����BluetoothAdapter
+        // 获取蓝牙适配�?
         final BluetoothManager bluetoothManager =
                 (BluetoothManager) getSystemService(Context.BLUETOOTH_SERVICE);
         mBluetoothAdapter = bluetoothManager.getAdapter();
 
-        // 濡�������������������?����?��??????????����??��??��??�?�������轰��������������???����??��?������
+        // 判断设备是否支持蓝牙
         if (mBluetoothAdapter == null) {
             Toast.makeText(this, R.string.error_bluetooth_not_supported, Toast.LENGTH_SHORT).show();
             finish();
@@ -75,7 +70,7 @@ public class DeviceScanActivity extends Activity implements OnItemClickListener{
         // fire an intent to display a dialog asking the user to grant permission to enable it.
         if (!mBluetoothAdapter.isEnabled()) {
             if (!mBluetoothAdapter.isEnabled()) {
-            	//濡����纭��?��褰�������??��?????�������?��������??��??�?��??����???��??���?�������?
+            	//如果没开蓝牙,请求打开蓝牙
                 Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
                 startActivityForResult(enableBtIntent, REQUEST_ENABLE_BT);
             }
@@ -88,10 +83,9 @@ public class DeviceScanActivity extends Activity implements OnItemClickListener{
         scanLeDevice(true);
     }
 
-    //��???����???��??��������??????���?�������?
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        // ��???��??������??����������???��??��??��?��??????��������
+        // 如果用户不同意打�?蓝牙,就直接�??�?
         if (requestCode == REQUEST_ENABLE_BT && resultCode == Activity.RESULT_CANCELED) {
             finish();
             return;
@@ -123,12 +117,12 @@ public class DeviceScanActivity extends Activity implements OnItemClickListener{
 	}
 
     /**
-     * ��������??���?������????���?
-     * @param enable ������������������
+     * 扫描蓝牙设备
+     * @param enable 是否扫描
      */
     private void scanLeDevice(final boolean enable) {
-        if (enable) {
-            // ??���?����������??��??��???�����???������
+        if (enable) { //�?始扫�?
+            // 10s后停止扫�?
             mHandler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
@@ -142,7 +136,7 @@ public class DeviceScanActivity extends Activity implements OnItemClickListener{
             mScanning = true;
             mBluetoothAdapter.startLeScan(mLeScanCallback);
             getActionBar().setTitle(R.string.title_devices);
-        } else {
+        } else { //停止扫描
             mScanning = false;
             mBluetoothAdapter.stopLeScan(mLeScanCallback);
             getActionBar().setTitle(R.string.app_name);
@@ -181,7 +175,7 @@ public class DeviceScanActivity extends Activity implements OnItemClickListener{
     }
 
 
-    // Device scan callback.
+    // 扫描到设备后,添加到adapter�?
     private BluetoothAdapter.LeScanCallback mLeScanCallback =
             new BluetoothAdapter.LeScanCallback() {
 
