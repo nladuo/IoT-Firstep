@@ -31,7 +31,7 @@ public class DeviceScanActivity extends Activity implements OnItemClickListener{
 
     
     private static final int REQUEST_ENABLE_BT = 1;
-    // 扫描时常�?10000ms
+    // 扫描持续10000ms
     private static final long SCAN_PERIOD = 10000;
 
     @Override
@@ -48,7 +48,7 @@ public class DeviceScanActivity extends Activity implements OnItemClickListener{
             finish();
         }
 
-        // 获取蓝牙适配�?
+        // 获取蓝牙适配器
         final BluetoothManager bluetoothManager =
                 (BluetoothManager) getSystemService(Context.BLUETOOTH_SERVICE);
         mBluetoothAdapter = bluetoothManager.getAdapter();
@@ -66,11 +66,9 @@ public class DeviceScanActivity extends Activity implements OnItemClickListener{
     protected void onResume() {
         super.onResume();
 
-        // Ensures Bluetooth is enabled on the device.  If Bluetooth is not currently enabled,
-        // fire an intent to display a dialog asking the user to grant permission to enable it.
+      //如果没开蓝牙,请求打开蓝牙
         if (!mBluetoothAdapter.isEnabled()) {
             if (!mBluetoothAdapter.isEnabled()) {
-            	//如果没开蓝牙,请求打开蓝牙
                 Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
                 startActivityForResult(enableBtIntent, REQUEST_ENABLE_BT);
             }
@@ -85,7 +83,7 @@ public class DeviceScanActivity extends Activity implements OnItemClickListener{
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        // 如果用户不同意打�?蓝牙,就直接�??�?
+        // 如果用户不同意打开蓝牙,就直接退出
         if (requestCode == REQUEST_ENABLE_BT && resultCode == Activity.RESULT_CANCELED) {
             finish();
             return;
@@ -113,7 +111,6 @@ public class DeviceScanActivity extends Activity implements OnItemClickListener{
             mScanning = false;
         }
         startActivity(intent);
-		
 	}
 
     /**
@@ -121,14 +118,14 @@ public class DeviceScanActivity extends Activity implements OnItemClickListener{
      * @param enable 是否扫描
      */
     private void scanLeDevice(final boolean enable) {
-        if (enable) { //�?始扫�?
-            // 10s后停止扫�?
+        if (enable) { //开始扫描
+            // 10s后停止扫描
             mHandler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
                     mScanning = false;
                     mBluetoothAdapter.stopLeScan(mLeScanCallback);
-                    invalidateOptionsMenu();
+                    invalidateOptionsMenu();//这句会调用onCreateOptionsMenu
                     getActionBar().setTitle(R.string.app_name);
                 }
             }, SCAN_PERIOD);
@@ -175,7 +172,7 @@ public class DeviceScanActivity extends Activity implements OnItemClickListener{
     }
 
 
-    // 扫描到设备后,添加到adapter�?
+    // 扫描到设备后,添加到adapter中
     private BluetoothAdapter.LeScanCallback mLeScanCallback =
             new BluetoothAdapter.LeScanCallback() {
 
