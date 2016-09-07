@@ -59,10 +59,10 @@ public class DeviceControlActivity extends Activity {
     };
 
     /**
-     * 用于接收蓝牙状�?�广播的BroadcastReceiver
+     * 用于接收蓝牙状态广播的BroadcastReceiver
      * ACTION_GATT_CONNECTED: 蓝牙连接成功广播.
      * ACTION_GATT_DISCONNECTED: 蓝牙断开广播.
-     * ACTION_GATT_SERVICES_DISCOVERED: 发现GATT的服务广�?.
+     * ACTION_GATT_SERVICES_DISCOVERED: 发现GATT的服务广播.
      * ACTION_DATA_AVAILABLE: 接收到蓝牙的数据广播
      * 
      */
@@ -96,7 +96,7 @@ public class DeviceControlActivity extends Activity {
         setContentView(R.layout.activity_control);
 
         final Intent intent = getIntent();
-        //获取设备名以及设备地�?
+        //获取设备名以及设备地址
         mDeviceName = intent.getStringExtra(C.EXTRAS_DEVICE_NAME);
         mDeviceAddress = intent.getStringExtra(C.EXTRAS_DEVICE_ADDRESS);
         
@@ -105,19 +105,20 @@ public class DeviceControlActivity extends Activity {
         
         getActionBar().setTitle(mDeviceName);
         getActionBar().setDisplayHomeAsUpEnabled(true);
+        //绑定服务
         Intent gattServiceIntent = new Intent(this, BluetoothLeService.class);
         bindService(gattServiceIntent, mServiceConnection, BIND_AUTO_CREATE);
-        //点击发�?�按�?
+        //点击发送按钮
        findViewById(R.id.control_send_btn).setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				//没找到对应的特征�?,直接返回
+				//没找到对应的特征值,直接返回
 				if (mCharacteristic == null) {
-					Toast.makeText(DeviceControlActivity.this, "没有找到对应的特征�??,请尝试重新连�?", 
+					Toast.makeText(DeviceControlActivity.this, "没有找到对应的特征值,请尝试重新连接", 
 							Toast.LENGTH_SHORT).show();
 					return;
 				}
-				//没连�?,直接返回
+				//没连接,直接返回
 				if (!mConnected) {
 					Toast.makeText(DeviceControlActivity.this, "设备尚未连接", 
 							Toast.LENGTH_SHORT).show();
@@ -128,18 +129,6 @@ public class DeviceControlActivity extends Activity {
 				sendStrDataToLeDevice(dataStr);
 			}
 		});
-    }
-    
-    /**
-     * 发�?�字符串给蓝牙设�?
-     * @param data
-     */
-    private void sendStrDataToLeDevice(String data){
-		if (!data.equals("")) {
-			byte[] datas = data.getBytes();
-			mCharacteristic.setValue(datas);
-			mBluetoothLeService.writeCharacteristic(mCharacteristic);
-		}
     }
 
     @Override
@@ -193,9 +182,21 @@ public class DeviceControlActivity extends Activity {
         }
         return super.onOptionsItemSelected(item);
     }
+    
+    /**
+     * 发送字符串给蓝牙设备
+     * @param data
+     */
+    private void sendStrDataToLeDevice(String data){
+		if (!data.equals("")) {
+			byte[] datas = data.getBytes();
+			mCharacteristic.setValue(datas);
+			mBluetoothLeService.writeCharacteristic(mCharacteristic);
+		}
+    }
 
     /**
-     * 更新连接状�??
+     * 更新连接状态
      * @param resourceId
      */
     private void updateConnectionState(final int resourceId) {
@@ -219,7 +220,7 @@ public class DeviceControlActivity extends Activity {
     }
 
     /**
-     * 获取BLE的特征�??
+     * 获取BLE的特征值
      * @param gattServices
      */
     private void getCharacteristic(List<BluetoothGattService> gattServices) {
@@ -230,17 +231,17 @@ public class DeviceControlActivity extends Activity {
         for (BluetoothGattService gattService : gattServices) {
             uuid = gattService.getUuid().toString();
             
-            //找uuid�?0xffe0的服�?
+            //找uuid为0xffe0的服务
             if (uuid.equals(C.SERVICE_UUID)) {
             	List<BluetoothGattCharacteristic> gattCharacteristics =
                         gattService.getCharacteristics();
-                //找uuid�?0xffe1的特征�??
+                //找uuid为0xffe1的特征值
                 for (BluetoothGattCharacteristic gattCharacteristic : gattCharacteristics) {
                     uuid = gattCharacteristic.getUuid().toString();
                     if(uuid.equals(C.CHAR_UUID)){
                     	mCharacteristic = gattCharacteristic;
                     	final int charaProp = gattCharacteristic.getProperties();
-                		//�?启该特征值的数据的监�?
+                		//开启该特征值的数据的监听
                 		if ((charaProp | BluetoothGattCharacteristic.PROPERTY_NOTIFY) > 0) {
                             mBluetoothLeService.setCharacteristicNotification(
                                     mCharacteristic, true);
@@ -251,9 +252,9 @@ public class DeviceControlActivity extends Activity {
 			}
         }
         
-        //如果没找到指定的特征�?,直接返回
+        //如果没找到指定的特征值,直接返回
         if (mCharacteristic == null) {
-        	Toast.makeText(DeviceControlActivity.this, "未找到指定特征�??", 
+        	Toast.makeText(DeviceControlActivity.this, "未找到指定特征值", 
         			Toast.LENGTH_LONG).show();
 			finish();
 		}
