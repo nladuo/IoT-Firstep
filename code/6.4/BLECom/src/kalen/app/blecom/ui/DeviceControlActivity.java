@@ -74,7 +74,6 @@ public class DeviceControlActivity extends Activity {
                 mConnected = true;
                 updateConnectionState(R.string.connected);
                 invalidateOptionsMenu();
-                
             } else if (BluetoothLeService.ACTION_GATT_DISCONNECTED.equals(action)) {
                 mConnected = false;
                 updateConnectionState(R.string.disconnected);
@@ -84,7 +83,6 @@ public class DeviceControlActivity extends Activity {
                 getCharacteristic(mBluetoothLeService.getSupportedGattServices());
             } else if (BluetoothLeService.ACTION_DATA_AVAILABLE.equals(action)) {
             	System.out.println("receive data");
-            	
                 onReceiveData(intent.getByteArrayExtra(BluetoothLeService.EXTRA_DATA));
             }
         }
@@ -105,22 +103,23 @@ public class DeviceControlActivity extends Activity {
         
         getActionBar().setTitle(mDeviceName);
         getActionBar().setDisplayHomeAsUpEnabled(true);
-        //绑定服务
+        //绑定BLE服务
         Intent gattServiceIntent = new Intent(this, BluetoothLeService.class);
         bindService(gattServiceIntent, mServiceConnection, BIND_AUTO_CREATE);
         //点击发送按钮
-       findViewById(R.id.control_send_btn).setOnClickListener(new OnClickListener() {
+        findViewById(R.id.control_send_btn).setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				//没找到对应的特征值,直接返回
-				if (mCharacteristic == null) {
-					Toast.makeText(DeviceControlActivity.this, "没有找到对应的特征值,请尝试重新连接", 
-							Toast.LENGTH_SHORT).show();
-					return;
-				}
 				//没连接,直接返回
 				if (!mConnected) {
 					Toast.makeText(DeviceControlActivity.this, "设备尚未连接", 
+							Toast.LENGTH_SHORT).show();
+					return;
+				}
+				
+				//没找到对应的特征值,直接返回
+				if (mCharacteristic == null) {
+					Toast.makeText(DeviceControlActivity.this, "没有找到对应的特征值,请尝试重新连接", 
 							Toast.LENGTH_SHORT).show();
 					return;
 				}

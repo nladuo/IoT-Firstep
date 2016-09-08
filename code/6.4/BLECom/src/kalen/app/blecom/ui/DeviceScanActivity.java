@@ -29,7 +29,6 @@ public class DeviceScanActivity extends Activity implements OnItemClickListener{
     private LeDeviceListAdapter mAdapter;
     private ListView mLView;
 
-    
     private static final int REQUEST_ENABLE_BT = 1;
     // 扫描持续10000ms
     private static final long SCAN_PERIOD = 10000;
