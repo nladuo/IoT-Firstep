@@ -55,7 +55,8 @@
 
 ### 附录：
 - 附录A：[如何导入别人的安卓工程](https://github.com/nladuo/IoT-Firstep/blob/master/book/appendixA.md)  
-- 附录B：[如何在安卓中进行真机测试](https://github.com/nladuo/IoT-Firstep/blob/master/book/appendixB.md)  
+- 附录B：[如何在ADT中进行真机测试](https://github.com/nladuo/IoT-Firstep/blob/master/book/appendixB.md)  
+- 附录C：[如何在Xcode中进行真机测试]  
 
 ## LICENSE
 MIT

@@ -10,9 +10,6 @@
 #import "SerialGATT.h"
 #import "LeStatusNotificationCenter.h"
 
-//#define RSSI_THRESHOLD -60
-//#define WARNING_MESSAGE @"z"
-
 @class CBPeripheral;
 @class SerialGATT;
 
