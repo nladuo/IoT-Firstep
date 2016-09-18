@@ -25,7 +25,7 @@
         - 3.6 [Service学习](https://github.com/nladuo/IoT-Firstep/blob/master/book/3.6.md)  
         - 3.7 [BroadCastReciever学习](https://github.com/nladuo/IoT-Firstep/blob/master/book/3.7.md)  
 - 第4部分：[移动开发——iOS](https://github.com/nladuo/IoT-Firstep/blob/master/book/4.0.md)  
-        - 4.1 [Objective-C语言快速入门]  
+        - 4.1 [Objective-C语言快速入门](https://github.com/nladuo/IoT-Firstep/blob/master/book/4.1.md)  
         - 4.2 [基本控件使用]  
         - 4.3 [StoryBoard使用]  
         - 4.4 [页面跳转与传值]  
