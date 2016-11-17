@@ -4,6 +4,9 @@
 努力编写中，还未进行核查。。。
 ## 说明
 本文的开发环境除了iOS的开发，都是在Windows平台进行的。
+## TODO
+- [ ] 除完成目录外，第3部分添加使用Android StudioIDE的版本
+
 ## 目录
 - [前言](https://github.com/nladuo/IoT-Firstep/blob/master/book/preface.md)  
 
