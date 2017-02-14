@@ -1,13 +1,13 @@
 # IoT-Firstep
 一个物联网(IoT)开发的入门教程。涉及单片机、上位机、移动应用、服务器后台开发的知识。以及蓝牙4.0、以太网模块的使用实例。
+## 更新计划
+计划iOS使用swift语言重构，Android部分将基于Android Studio重新讲解。
 ## 状态
 努力编写中，还未进行核查。。。
 ## 说明
 本文的开发环境除了iOS的开发，都是在Windows平台进行的。
-## TODO
-- [ ] 除完成目录外，第3部分添加使用Android StudioIDE的版本
 
-## 目录
+## 内容介绍
 - [前言](https://github.com/nladuo/IoT-Firstep/blob/master/book/preface.md)  
 
 ### 第一部分：基础入门
@@ -28,11 +28,10 @@
         - 3.6 [Service学习](https://github.com/nladuo/IoT-Firstep/blob/master/book/3.6.md)  
         - 3.7 [BroadCastReciever学习](https://github.com/nladuo/IoT-Firstep/blob/master/book/3.7.md)  
 - 第4部分：[移动开发——iOS](https://github.com/nladuo/IoT-Firstep/blob/master/book/4.0.md)  
-        - 4.1 [Objective-C语言快速入门](https://github.com/nladuo/IoT-Firstep/blob/master/book/4.1.md)  
-        - 4.2 [基本控件使用]  
-        - 4.3 [StoryBoard使用]  
-        - 4.4 [页面跳转与传值]  
-        - 4.5 [UITableView的使用]  
+        - 4.1 [基本控件使用]  
+        - 4.2 [StoryBoard使用]  
+        - 4.3 [页面跳转与传值]  
+        - 4.4 [UITableView的使用]  
 
 - 第5部分：[后端开发——Golang](https://github.com/nladuo/IoT-Firstep/blob/master/book/5.0.md)  
         - 5.1 [go语言开发环境搭建](https://github.com/nladuo/IoT-Firstep/blob/master/book/5.1.md)  
