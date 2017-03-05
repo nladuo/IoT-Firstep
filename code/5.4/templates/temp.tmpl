@@ -1,0 +1,7 @@
+<html>
+    {{if .temp}}
+      <h1>{{ .city }}的温度是：{{ .temp }}</h1>
+    {{ else }}
+      <h1>没有找到{{ .city }}的温度</h1>
+    {{ end }}
+</html>
