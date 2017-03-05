@@ -1,7 +1,7 @@
 # IoT-Firstep
 一个物联网(IoT)开发的入门教程。涉及单片机、上位机、移动应用、服务器后台开发的知识。以及蓝牙4.0、以太网模块的使用实例。
 ## 更新计划
-计划iOS使用swift语言重构，Android部分将基于Android Studio重新讲解。
+计划iOS使用swift语言重构，Android部分将基于Android Studio重新编写。
 ## 状态
 努力编写中，还未进行核查。。。
 ## 说明
@@ -20,13 +20,13 @@
         - 2.1 [winform快速入门](https://github.com/nladuo/IoT-Firstep/blob/master/book/2.1.md)  
         - 2.2 [serialport控件使用](https://github.com/nladuo/IoT-Firstep/blob/master/book/2.2.md)  
 - 第3部分：[移动开发——Android](https://github.com/nladuo/IoT-Firstep/blob/master/book/3.0.md)  
-        - 3.1 [安卓开发环境搭建](https://github.com/nladuo/IoT-Firstep/blob/master/book/3.1.md)  
-        - 3.2 [HelloActivity分析](https://github.com/nladuo/IoT-Firstep/blob/master/book/3.2.md)  
-        - 3.3 [LinearLayout与基本控件](https://github.com/nladuo/IoT-Firstep/blob/master/book/3.3.md)  
-        - 3.4 [Intent与Activity的生命周期](https://github.com/nladuo/IoT-Firstep/blob/master/book/3.4.md)  
-        - 3.5 [ListView与BaseAdapter](https://github.com/nladuo/IoT-Firstep/blob/master/book/3.5.md)  
-        - 3.6 [Service学习](https://github.com/nladuo/IoT-Firstep/blob/master/book/3.6.md)  
-        - 3.7 [BroadCastReciever学习](https://github.com/nladuo/IoT-Firstep/blob/master/book/3.7.md)  
+        - 3.1 [安卓开发环境搭建]  
+        - 3.2 [HelloActivity分析]  
+        - 3.3 [LinearLayout与基本控件]  
+        - 3.4 [Intent与Activity的生命周期]  
+        - 3.5 [ListView与BaseAdapter]  
+        - 3.6 [Service学习]  
+        - 3.7 [BroadCastReciever学习]  
 - 第4部分：[移动开发——iOS](https://github.com/nladuo/IoT-Firstep/blob/master/book/4.0.md)  
         - 4.1 [基本控件使用]  
         - 4.2 [StoryBoard使用]  
@@ -38,7 +38,7 @@
         - 5.2 [go语言基础快速入门](https://github.com/nladuo/IoT-Firstep/blob/master/book/5.2.md)  
         - 5.3 [用go语言显示一个网页](https://github.com/nladuo/IoT-Firstep/blob/master/book/5.3.md)  
         - 5.4 [go语言web框架——gin](https://github.com/nladuo/IoT-Firstep/blob/master/book/5.4.md)  
-        - 5.5 [部署go语言项目]  
+        - 5.5 [部署go语言项目](https://github.com/nladuo/IoT-Firstep/blob/master/book/5.5.md)  
 
 ### 第二部分：案例学习
 - 第6部分：[蓝牙4.0案例——手机控制RGB灯颜色](https://github.com/nladuo/IoT-Firstep/blob/master/book/6.0.md)  
@@ -56,8 +56,8 @@
         - 7.4 [总结与补充]  
 
 ### 附录：
-- 附录A：[如何导入别人的安卓工程](https://github.com/nladuo/IoT-Firstep/blob/master/book/appendixA.md)  
-- 附录B：[如何在ADT中进行真机测试](https://github.com/nladuo/IoT-Firstep/blob/master/book/appendixB.md)  
+- 附录A：[如何导入别人的安卓工程]  
+- 附录B：[如何在ADT中进行真机测试]  
 - 附录C：[如何在Xcode中进行真机测试]  
 
 ## LICENSE
