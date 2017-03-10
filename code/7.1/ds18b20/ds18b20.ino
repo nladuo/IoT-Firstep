@@ -25,4 +25,6 @@ void loop(void)
  
   Serial.print("Temperature for the device 1 (index 0) is: ");
   Serial.println(sensors.getTempCByIndex(0));  
+
+  delay(1000);
 }
