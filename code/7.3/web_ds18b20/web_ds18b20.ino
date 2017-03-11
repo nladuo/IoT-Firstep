@@ -1,46 +1,3 @@
-# 在网页上显示温度
-
-## 介绍
-学习了前两章之后，本章只要把前两章的内容结合起来，然后编写后台处理温度数据就好了。
-
-## 编写后台
-在这里，我们需要编写两个路由，一个路由用于处理显示温度，另一个处理更新温度，代码如下：
-``` go
-package main
-
-import (
-  "github.com/gin-gonic/gin"
-  "fmt"
-)
-
-var (
-  temp string = "0.0"
-)
-
-func main() {
-    r := gin.Default()
-
-    //显示温度
-    r.GET("/", func(c *gin.Context) {
-      c.String(200, fmt.Sprintf("The Temperature is: %s ℃", temp))
-    })
-
-    //更新温度
-    r.GET("/update", func(c *gin.Context) {
-      temp = c.DefaultQuery("temp", "0.0")
-      c.String(200, "okay")
-    })
-
-    r.Run(":8000")
-}
-```
-下面我们运行测试一下，更新一下温度，并查看温度，可以看到温度变成我们更新的温度了。<br>
-![](./imgs/7.3/7.3-1.png)<br><br>
-
-
-## 结合以太网和温度传感器模块
-下面，我们将7.2节的程序改一改，在sendHttpGet方法里添加获取DS18B20传感器温度代码。
-``` c++
 #include <EtherCard.h>
 #include <OneWire.h>
 #include <DallasTemperature.h>
@@ -85,14 +42,14 @@ void setup () {
 
   sensors.begin();// 加载DS18B20库
 
-  if (ether.begin(sizeof Ethernet::buffer, mymac, 10) == 0)
+  if (ether.begin(sizeof Ethernet::buffer, mymac, 10) == 0) 
     Serial.println("Failed to access Ethernet controller");
   else
     Serial.println("Ethernet controller initialized");
-
+  
   if (!ether.dhcpSetup())
     Serial.println("DHCP failed");
-  else
+  else 
     Serial.println("DHCP succeeded");
 
   ether.printIp("IP:  ", ether.myip);
@@ -118,17 +75,3 @@ void loop () {
     Serial.println();
   }
 }
-```
-
-## 测试程序
-最后，我们上传程序，打开串口监视器查看输出。<br>
-![](./imgs/7.3/7.3-2.jpg)<br><br>
-
-可以看到，我们已经得到了"okay"的正确返回，同时，查看浏览器，看看温度是否正确。<br>
-![](./imgs/7.3/7.3-3.png)<br><br>
-
-到这里，我们的应用就做好了，现在我们可以把代码上传到服务器上，看看能不能获取到温度。
-## 链接
-- [目录](directory.md)  
-- 上一节：[ENC28J60模块的使用](7.2.md)  
-- 下一节：[其它案例](8.0.md)  
