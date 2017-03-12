@@ -13,17 +13,22 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/menu_refresh"
-          android:checkable="false"
-          android:orderInCategory="1"
-          android:showAsAction="ifRoom"/>
-    <item android:id="@+id/menu_connect"
-          android:title="@string/menu_connect"
-          android:orderInCategory="100"
-          android:showAsAction="ifRoom|withText"/>
-    <item android:id="@+id/menu_disconnect"
-          android:title="@string/menu_disconnect"
-          android:orderInCategory="101"
-          android:showAsAction="ifRoom|withText"/>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_refresh"
+        android:checkable="false"
+        android:title=""
+        android:orderInCategory="1"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/menu_connect"
+        android:title="@string/menu_connect"
+        android:orderInCategory="100"
+        app:showAsAction="ifRoom|withText"/>
+    <item
+        android:id="@+id/menu_disconnect"
+        android:title="@string/menu_disconnect"
+        android:orderInCategory="101"
+        app:showAsAction="ifRoom|withText"/>
 </menu>
