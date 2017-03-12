@@ -65,4 +65,4 @@
 - 附录C：[如何在Xcode中进行真机测试]  
 
 ## LICENSE
-MIT
+GPL-3.0
