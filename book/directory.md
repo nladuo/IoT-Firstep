@@ -22,8 +22,8 @@
         - 4.1 [使用Playgroud体验Swift]  
         - 4.2 [基本控件使用]  
         - 4.3 [StoryBoard使用]  
-        - 4.4 [页面跳转与传值]  
-        - 4.5 [UITableView的使用]  
+        - 4.4 [UITableView的使用]  
+        - 4.5 [CocoaPods的使用]  
 - 第5部分：[后端开发——Golang](5.0.md)  
         - 5.1 [go语言开发环境搭建](5.1.md)  
         - 5.2 [go语言基础快速入门](5.2.md)  

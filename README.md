@@ -31,8 +31,8 @@
         - 4.1 [使用Playgroud体验Swift]  
         - 4.2 [基本控件使用]  
         - 4.3 [StoryBoard使用]  
-        - 4.4 [页面跳转与传值]  
-        - 4.5 [UITableView的使用]  
+        - 4.4 [UITableView的使用]  
+        - 4.5 [CocoaPods的使用]  
 
 - 第5部分：[后端开发——Golang](https://github.com/nladuo/IoT-Firstep/blob/master/book/5.0.md)  
         - 5.1 [go语言开发环境搭建](https://github.com/nladuo/IoT-Firstep/blob/master/book/5.1.md)  
