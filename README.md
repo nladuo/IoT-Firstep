@@ -5,7 +5,7 @@
 ## 状态
 努力编写中，还未进行核查。。。
 ## 说明
-本文的开发环境都是在Windows平台进行的。关于iOS端的BLE开发暂时没有编写，后期可能会添加，章节编号4.x暂时空出来。
+本文的开发环境都是在Windows平台进行的。关于iOS端的BLE开发暂时没有编写，后续可能会添加，章节编号4.x暂时空出来。
 
 ## 内容介绍
 - [前言](https://github.com/nladuo/IoT-Firstep/blob/master/book/preface.md)  
@@ -27,7 +27,6 @@
         - 3.5 [ListView与BaseAdapter]  
         - 3.6 [Service学习]  
         - 3.7 [BroadCastReciever学习]  
-
 - 第4部分：[后端开发——Golang](https://github.com/nladuo/IoT-Firstep/blob/master/book/5.0.md)  
         - 4.1 [go语言开发环境搭建](https://github.com/nladuo/IoT-Firstep/blob/master/book/5.1.md)  
         - 4.2 [go语言基础快速入门](https://github.com/nladuo/IoT-Firstep/blob/master/book/5.2.md)  
@@ -40,17 +39,12 @@
         - 5.1 [用串口控制RGB灯颜色](https://github.com/nladuo/IoT-Firstep/blob/master/book/6.1.md)  
         - 5.2 [用上位机控制RGB灯颜色](https://github.com/nladuo/IoT-Firstep/blob/master/book/6.2.md)  
         - 5.3 [蓝牙4.0简单介绍](https://github.com/nladuo/IoT-Firstep/blob/master/book/6.3.md)  
-        - 5.4 [蓝牙4.0安卓例程源码阅读](https://github.com/nladuo/IoT-Firstep/blob/master/book/6.4.md)  
-        - 5.5 [用安卓手机控制RGB灯颜色](https://github.com/nladuo/IoT-Firstep/blob/master/book/6.5.md)  
+        - 5.4 [蓝牙4.0安卓例程源码阅读]  
+        - 5.5 [用安卓手机控制RGB灯颜色]  
 - 第6部分：[网络模块案例——温度采集系统开发](https://github.com/nladuo/IoT-Firstep/blob/master/book/7.0.md)  
         - 6.1 [Arduino温度传感器的使用](https://github.com/nladuo/IoT-Firstep/blob/master/book/7.1.md)  
         - 6.2 [ENC28J60模块的使用](https://github.com/nladuo/IoT-Firstep/blob/master/book/7.2.md)  
         - 6.3 [在网页上显示温度](https://github.com/nladuo/IoT-Firstep/blob/master/book/7.3.md)  
-
-- 第7部分：[其它案例](https://github.com/nladuo/IoT-Firstep/blob/master/book/8.0.md)  
-        - 7.1 [案例一：蓝牙小车制作]  
-        - 7.2 [案例二：自制PM2.5检测仪]  
-        - 7.3 [案例三：网页控制小灯]  
 
 ### 附录：
 - 附录A：[如何在Android Studio中进行真机测试]  
