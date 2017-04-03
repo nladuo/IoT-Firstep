@@ -12,7 +12,7 @@
         - 2.2 [serialport控件使用](2.2.md)  
 - 第3部分：[移动开发——Android](3.0.md)  
         - 3.1 [安卓开发环境搭建](3.1.md)  
-        - 3.2 [HelloActivity分析]  
+        - 3.2 [HelloActivity分析](3.2.md)  
         - 3.3 [LinearLayout与基本控件]  
         - 3.4 [Intent与Activity的生命周期]  
         - 3.5 [ListView与BaseAdapter]  
