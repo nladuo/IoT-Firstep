@@ -1,7 +1,5 @@
 # IoT-Firstep
 一个物联网(IoT)开发的入门教程。涉及单片机、上位机、移动应用、服务器后台开发的知识。以及蓝牙4.0、以太网模块的使用实例。
-## 更新计划
-计划Android部分将基于Android Studio重新编写。
 ## 状态
 努力编写中，还未进行核查。。。
 ## 说明
@@ -48,6 +46,9 @@
 
 ### 附录：
 - 附录A：[如何在Android Studio中进行真机测试]  
+
+## 关注我
+![qrcode](./resource/qrcode.jpg)
 
 ## LICENSE
 GPL-3.0
