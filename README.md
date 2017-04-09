@@ -5,7 +5,7 @@
 ## 状态
 努力编写中，还未进行核查。。。
 ## 说明
-本文的开发环境都是在Windows平台进行的。关于iOS端的BLE开发暂时没有编写，后续可能会添加，章节编号4.x暂时空出来。
+本文的开发环境都是在Windows平台进行的。关于iOS相关的开发暂时没有编写，后续可能会添加，章节编号4.x暂时空出来。
 
 ## 内容介绍
 - [前言](https://github.com/nladuo/IoT-Firstep/blob/master/book/preface.md)  
