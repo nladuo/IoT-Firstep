@@ -23,7 +23,7 @@
         - 3.1 [安卓开发环境搭建](https://github.com/nladuo/IoT-Firstep/blob/master/book/3.1.md)  
         - 3.2 [HelloActivity分析](https://github.com/nladuo/IoT-Firstep/blob/master/book/3.2.md)  
         - 3.3 [LinearLayout与基本控件](https://github.com/nladuo/IoT-Firstep/blob/master/book/3.3.md)  
-        - 3.4 [Intent与Activity的生命周期]  
+        - 3.4 [Intent与Activity的生命周期](https://github.com/nladuo/IoT-Firstep/blob/master/book/3.4.md)  
         - 3.5 [ListView与BaseAdapter]  
         - 3.6 [Service学习]  
         - 3.7 [BroadCastReciever学习]  
