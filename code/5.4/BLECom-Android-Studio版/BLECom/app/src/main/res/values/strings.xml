@@ -35,5 +35,4 @@
     <string name="control_send">发送</string>
     <string name="control_send_hint">填写发送的数据</string>
 
-    <string name="permission_ble_rationale">是否允许蓝牙权限</string>
 </resources>

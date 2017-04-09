@@ -6,14 +6,14 @@ import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothManager;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.NonNull;
-import android.support.annotation.StringRes;
-import android.support.v7.app.AlertDialog;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -25,13 +25,7 @@ import android.widget.Toast;
 import kalen.app.blecom.adapter.LeDeviceListAdapter;
 import kalen.app.blecom.model.C;
 import kalen.app.blecom.R;
-import permissions.dispatcher.NeedsPermission;
-import permissions.dispatcher.OnPermissionDenied;
-import permissions.dispatcher.OnShowRationale;
-import permissions.dispatcher.PermissionRequest;
-import permissions.dispatcher.RuntimePermissions;
 
-@RuntimePermissions
 public class DeviceScanActivity extends AppCompatActivity implements OnItemClickListener{
     
     private BluetoothAdapter mBluetoothAdapter;
@@ -44,6 +38,9 @@ public class DeviceScanActivity extends AppCompatActivity implements OnItemClick
     private static final int REQUEST_ENABLE_BT = 1;
     // 扫描持续10000ms
     private static final long SCAN_PERIOD = 10000;
+
+    private static final int SCAN_TRUE_PERMISSION_REQ_CODE = 100;
+    private static final int SCAN_FALSE_PERMISSION_REQ_CODE = 101;
 
 
     @Override
@@ -91,9 +88,7 @@ public class DeviceScanActivity extends AppCompatActivity implements OnItemClick
         mAdapter = new LeDeviceListAdapter(this);
         mLView.setAdapter(mAdapter);
         mLView.setOnItemClickListener(this);
-
-
-        DeviceScanActivityPermissionsDispatcher.scanLeDeviceWithCheck(this, true);
+        scanLeDevice(true);
     }
 
     @Override
@@ -129,12 +124,38 @@ public class DeviceScanActivity extends AppCompatActivity implements OnItemClick
 	}
 
     /**
+     * 扫描蓝牙设备（判断权限）
+     */
+    void scanLeDevice(boolean enable) {
+        if (Build.VERSION.SDK_INT >= 23) {
+            if (ContextCompat.checkSelfPermission(this,
+                    Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+
+                if (enable) {
+                    ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_COARSE_LOCATION},
+                            SCAN_TRUE_PERMISSION_REQ_CODE);
+                } else {
+                    ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_COARSE_LOCATION},
+                            SCAN_FALSE_PERMISSION_REQ_CODE);
+                }
+
+                if(ActivityCompat.shouldShowRequestPermissionRationale(this,
+                        Manifest.permission.READ_CONTACTS)) {
+                    Toast.makeText(this, "开启位置服务才能使用扫描", Toast.LENGTH_SHORT).show();
+                }
+            } else {
+                doScanLeDevice(enable);
+            }
+        } else {
+            doScanLeDevice(enable);
+        }
+    }
+
+    /**
      * 扫描蓝牙设备
      * @param enable 是否扫描
      */
-    @NeedsPermission({Manifest.permission.BLUETOOTH, Manifest.permission.BLUETOOTH_ADMIN,
-            Manifest.permission.ACCESS_COARSE_LOCATION})
-    void scanLeDevice(final boolean enable) {
+    void doScanLeDevice(final boolean enable) {
         if (enable) { //开始扫描
             // 10s后停止扫描
             mHandler.postDelayed(new Runnable() {
@@ -162,38 +183,22 @@ public class DeviceScanActivity extends AppCompatActivity implements OnItemClick
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         // NOTE: delegate the permission handling to generated method
-        DeviceScanActivityPermissionsDispatcher.onRequestPermissionsResult(this, requestCode, grantResults);
-    }
 
-    @OnShowRationale({Manifest.permission.BLUETOOTH, Manifest.permission.BLUETOOTH_ADMIN,
-            Manifest.permission.ACCESS_COARSE_LOCATION})
-    void showRationaleForPermissionState(PermissionRequest request) {
-        showRationaleDialog(R.string.permission_ble_rationale, request);
-    }
+        switch (requestCode) {
+            case SCAN_TRUE_PERMISSION_REQ_CODE:
+                if (grantResults[0] != PackageManager.PERMISSION_GRANTED) { //有权限不通过就直接退出
+                    finish();
+                }
+                doScanLeDevice(true);
+                break;
+            case SCAN_FALSE_PERMISSION_REQ_CODE:
+                if (grantResults[0] != PackageManager.PERMISSION_GRANTED) { //有权限不通过就直接退出
+                    finish();
+                }
+                doScanLeDevice(false);
+                break;
+        }
 
-    @OnPermissionDenied({Manifest.permission.BLUETOOTH, Manifest.permission.BLUETOOTH_ADMIN,
-            Manifest.permission.ACCESS_COARSE_LOCATION})
-    void showDenyPermissions() {
-        Toast.makeText(this, "必须同意权限才能继续扫描", Toast.LENGTH_SHORT).show();
-    }
-
-    private void showRationaleDialog(@StringRes int messageResId, final PermissionRequest request) {
-        new AlertDialog.Builder(this)
-                .setPositiveButton("允许", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(@NonNull DialogInterface dialog, int which) {
-                        request.proceed();
-                    }
-                })
-                .setNegativeButton("拒绝", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(@NonNull DialogInterface dialog, int which) {
-                        request.cancel();
-                    }
-                })
-                .setCancelable(false)
-                .setMessage(messageResId)
-                .show();
     }
     
     @Override

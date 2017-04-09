@@ -25,7 +25,5 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     compile 'com.android.support:appcompat-v7:24.2.1'
-    compile 'com.github.hotchemi:permissionsdispatcher:2.3.1'
-    annotationProcessor 'com.github.hotchemi:permissionsdispatcher-processor:2.3.1'
     testCompile 'junit:junit:4.12'
 }
