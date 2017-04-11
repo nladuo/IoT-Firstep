@@ -17,7 +17,7 @@
         - 3.4 [Intent与Activity的生命周期](3.4.md)  
         - 3.5 [ListView与BaseAdapter](3.5.md)  
         - 3.6 [Service学习](3.6.md)  
-        - 3.7 [Android6.0权限机制]
+        - 3.7 [Android6.0权限机制]  
         - 3.8 [BroadCastReciever学习]  
 - 第4部分：[后端开发——Golang](5.0.md)  
         - 4.1 [go语言开发环境搭建](5.1.md)  
