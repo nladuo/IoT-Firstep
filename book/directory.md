@@ -15,7 +15,7 @@
         - 3.2 [HelloActivity分析](3.2.md)  
         - 3.3 [LinearLayout与基本控件](3.3.md)  
         - 3.4 [Intent与Activity的生命周期](3.4.md)  
-        - 3.5 [ListView与BaseAdapter]  
+        - 3.5 [ListView与BaseAdapter](3.5.md)  
         - 3.6 [Service学习]  
         - 3.7 [BroadCastReciever学习]  
 - 第4部分：[后端开发——Golang](5.0.md)  
