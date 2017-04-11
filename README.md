@@ -24,7 +24,8 @@
         - 3.4 [Intent与Activity的生命周期](https://github.com/nladuo/IoT-Firstep/blob/master/book/3.4.md)  
         - 3.5 [ListView与BaseAdapter](https://github.com/nladuo/IoT-Firstep/blob/master/book/3.5.md)  
         - 3.6 [Service学习](https://github.com/nladuo/IoT-Firstep/blob/master/book/3.6.md)  
-        - 3.7 [BroadCastReciever学习]  
+        - 3.7 [Android6.0权限机制]
+        - 3.8 [BroadCastReciever学习]  
 - 第4部分：[后端开发——Golang](https://github.com/nladuo/IoT-Firstep/blob/master/book/5.0.md)  
         - 4.1 [go语言开发环境搭建](https://github.com/nladuo/IoT-Firstep/blob/master/book/5.1.md)  
         - 4.2 [go语言基础快速入门](https://github.com/nladuo/IoT-Firstep/blob/master/book/5.2.md)  
