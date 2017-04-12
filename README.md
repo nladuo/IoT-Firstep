@@ -46,7 +46,7 @@
         - 6.3 [在网页上显示温度](https://github.com/nladuo/IoT-Firstep/blob/master/book/7.3.md)  
 
 ### 附录：
-- 附录A：[如何在Android Studio中进行真机测试]  
+- 附录A：[如何在Android Studio中进行真机测试](https://github.com/nladuo/IoT-Firstep/blob/master/book/appendixA.md)  
 
 ## 关注我
 ![qrcode](./resource/qrcode.jpg)

@@ -39,4 +39,4 @@
         - 6.3 [在网页上显示温度](7.3.md)  
 
 ## 附录：
-- 附录A：[如何在Android Studio中进行真机测试]  
+- 附录A：[如何在Android Studio中进行真机测试](appendixA.md)  
