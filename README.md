@@ -1,7 +1,7 @@
 # IoT-Firstep
 一个物联网(IoT)开发的入门教程。涉及单片机、上位机、移动应用、服务器后台开发的知识。以及蓝牙4.0、以太网模块的使用实例。
 ## 状态
-努力编写中，还未进行核查。。。
+校验中。。。
 ## 说明
 本文的开发环境都是在Windows平台进行的。关于iOS相关的开发暂时没有编写，后续可能会添加，章节编号4.x暂时空出来。
 
@@ -39,7 +39,7 @@
         - 5.2 [用上位机控制RGB灯颜色](https://github.com/nladuo/IoT-Firstep/blob/master/book/6.2.md)  
         - 5.3 [蓝牙4.0简单介绍](https://github.com/nladuo/IoT-Firstep/blob/master/book/6.3.md)  
         - 5.4 [蓝牙4.0安卓例程源码阅读](https://github.com/nladuo/IoT-Firstep/blob/master/book/6.4.md)  
-        - 5.5 [用安卓手机控制RGB灯颜色]  
+        - 5.5 [用安卓手机控制RGB灯颜色](https://github.com/nladuo/IoT-Firstep/blob/master/book/6.5.md)  
 - 第6部分：[网络模块案例——温度采集系统开发](https://github.com/nladuo/IoT-Firstep/blob/master/book/7.0.md)  
         - 6.1 [Arduino温度传感器的使用](https://github.com/nladuo/IoT-Firstep/blob/master/book/7.1.md)  
         - 6.2 [ENC28J60模块的使用](https://github.com/nladuo/IoT-Firstep/blob/master/book/7.2.md)  
