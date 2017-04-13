@@ -1,6 +1,5 @@
 package kalen.app.blecom.ui;
 
-import android.app.Activity;
 import android.bluetooth.BluetoothGattCharacteristic;
 import android.bluetooth.BluetoothGattService;
 import android.content.BroadcastReceiver;
@@ -206,17 +205,17 @@ public class DeviceControlActivity extends AppCompatActivity {
 
     /**
      * 接收到数据的回调
-     * @param data
+     * @param bytes
      */
     private void onReceiveData(byte[] bytes) {
     	String data = new String(bytes);
-        if (data != null) {
-        	try {
-				data = data.substring(0, data.lastIndexOf("\n")); 
-			} catch (Exception e) { }
-        	StringBuffer sb = new StringBuffer(mRecieveDataTView.getText().toString());
-        	mRecieveDataTView.setText(sb.append(data).toString());
+        try {
+            data = data.substring(0, data.lastIndexOf("\n"));
+        } catch (Exception e) {
+            e.printStackTrace();
         }
+        StringBuffer sb = new StringBuffer(mRecieveDataTView.getText().toString());
+        mRecieveDataTView.setText(sb.append(data).toString());
     }
 
     /**
@@ -231,11 +230,11 @@ public class DeviceControlActivity extends AppCompatActivity {
         for (BluetoothGattService gattService : gattServices) {
             uuid = gattService.getUuid().toString();
             
-            //找uuid为0xffe0的服务
+            //找uuid为0000ffe0-0000-1000-8000-00805f9b34fb的服务
             if (uuid.equals(C.SERVICE_UUID)) {
             	List<BluetoothGattCharacteristic> gattCharacteristics =
                         gattService.getCharacteristics();
-                //找uuid为0xffe1的特征值
+                //找uuid为0000ffe1-0000-1000-8000-00805f9b34fb的特征值
                 for (BluetoothGattCharacteristic gattCharacteristic : gattCharacteristics) {
                     uuid = gattCharacteristic.getUuid().toString();
                     if(uuid.equals(C.CHAR_UUID)){

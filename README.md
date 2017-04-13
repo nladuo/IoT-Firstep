@@ -38,7 +38,7 @@
         - 5.1 [用串口控制RGB灯颜色](https://github.com/nladuo/IoT-Firstep/blob/master/book/6.1.md)  
         - 5.2 [用上位机控制RGB灯颜色](https://github.com/nladuo/IoT-Firstep/blob/master/book/6.2.md)  
         - 5.3 [蓝牙4.0简单介绍](https://github.com/nladuo/IoT-Firstep/blob/master/book/6.3.md)  
-        - 5.4 [蓝牙4.0安卓例程源码阅读]  
+        - 5.4 [蓝牙4.0安卓例程源码阅读](https://github.com/nladuo/IoT-Firstep/blob/master/book/6.4.md)  
         - 5.5 [用安卓手机控制RGB灯颜色]  
 - 第6部分：[网络模块案例——温度采集系统开发](https://github.com/nladuo/IoT-Firstep/blob/master/book/7.0.md)  
         - 6.1 [Arduino温度传感器的使用](https://github.com/nladuo/IoT-Firstep/blob/master/book/7.1.md)  

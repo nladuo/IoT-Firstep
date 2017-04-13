@@ -67,9 +67,6 @@ public class DeviceScanActivity extends AppCompatActivity implements OnItemClick
             Toast.makeText(this, R.string.error_bluetooth_not_supported, Toast.LENGTH_SHORT).show();
             finish();
         }
-
-
-        
     }
 
     @Override
@@ -182,7 +179,6 @@ public class DeviceScanActivity extends AppCompatActivity implements OnItemClick
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        // NOTE: delegate the permission handling to generated method
 
         switch (requestCode) {
             case SCAN_TRUE_PERMISSION_REQ_CODE:

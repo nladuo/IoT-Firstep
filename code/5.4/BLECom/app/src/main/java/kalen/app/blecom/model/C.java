@@ -5,9 +5,9 @@ package kalen.app.blecom.model;
  */
 public class C {
 
-	//service_uuid:0xffe0
+	//service_uuid
     public static String SERVICE_UUID = "0000ffe0-0000-1000-8000-00805f9b34fb";
-    //characteristics_uuid:0xffe1
+    //characteristics_uuid
     public static String CHAR_UUID = "0000ffe1-0000-1000-8000-00805f9b34fb";
 
     public static final String EXTRAS_DEVICE_NAME = "DEVICE_NAME";
