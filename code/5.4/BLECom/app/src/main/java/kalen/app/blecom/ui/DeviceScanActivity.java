@@ -180,8 +180,13 @@ public class DeviceScanActivity extends AppCompatActivity implements OnItemClick
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
 
+        if (grantResults.length == 0) {
+            return;
+        }
+
         switch (requestCode) {
             case SCAN_TRUE_PERMISSION_REQ_CODE:
+
                 if (grantResults[0] != PackageManager.PERMISSION_GRANTED) { //有权限不通过就直接退出
                     finish();
                 }
@@ -194,7 +199,6 @@ public class DeviceScanActivity extends AppCompatActivity implements OnItemClick
                 doScanLeDevice(false);
                 break;
         }
-
     }
     
     @Override

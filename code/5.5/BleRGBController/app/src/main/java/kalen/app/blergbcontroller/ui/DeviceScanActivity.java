@@ -182,15 +182,21 @@ public class DeviceScanActivity extends AppCompatActivity implements OnItemClick
 
         switch (requestCode) {
             case SCAN_TRUE_PERMISSION_REQ_CODE:
-                if (grantResults[0] != PackageManager.PERMISSION_GRANTED) { //有权限不通过就直接退出
-                    finish();
+                if (grantResults.length != 0) {
+                    if (grantResults[0] != PackageManager.PERMISSION_GRANTED) { //有权限不通过就直接退出
+                        finish();
+                    }
                 }
+
                 doScanLeDevice(true);
                 break;
             case SCAN_FALSE_PERMISSION_REQ_CODE:
-                if (grantResults[0] != PackageManager.PERMISSION_GRANTED) { //有权限不通过就直接退出
-                    finish();
+                if (grantResults.length != 0) {
+                    if (grantResults[0] != PackageManager.PERMISSION_GRANTED) { //有权限不通过就直接退出
+                        finish();
+                    }
                 }
+
                 doScanLeDevice(false);
                 break;
         }
